@@ -12,8 +12,6 @@ VuePress V2 版本还在开发中，尚未推出正式版。
 ## 安装 VuePress
 参考 [VuePress - 手动安装](https://v2.vuepress.vuejs.org/zh/guide/getting-started.html#%E6%89%8B%E5%8A%A8%E5%AE%89%E8%A3%85)
 
-
-
 ### 初始化
 首先创建并进入一个新的文件夹，打开终端，执行下面的命令
 ```sh
@@ -129,7 +127,6 @@ export default defineUserConfig({
 },
 ```
 ![Navbar Dropmenu](https://m.nep.me/blog/post/vuepress-nav-drop.png) 
-
 
 ### 设置侧栏
 
@@ -267,7 +264,7 @@ git remote add origin https://github.com/<username>/<repo>.git
 git push -u origin main
 ```
 
-### 设置 Github Actions
+## 设置 Github Actions
 
 运行 `yarn docs:build` 会在 `.vuepress/dist` 下生成静态网页文件。
 
@@ -288,7 +285,7 @@ fatal: unable to access 'https://github.com/<username>/<repo>.git/': The request
 
 ![Action Permission](https://m.nep.me/blog/post/vuepress-github-actions-permissions.png)
 
-### 创建 Workflow 文件
+### 创建 `workflows` 文件
 
 需要创建 `.github/workflows/build-pages.yml` 文件
 
@@ -343,25 +340,30 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 ```
 
-我们需要使用 git 追踪该文件
+然后使用 git 追踪该文件
 
 ```
 git add .github/workflows/build-pages.yml
 
 git commit -m "create build-pages.yml"
-
-git push
 ```
 
-在推送后可以访问 Repo 顶部的 Actions 查看运行状态
+在推送(`git push`)后可以访问 Repo 顶部的 Actions 查看运行状态
 
+运行成功后我们可以查看 Repo 多了一个 `gh-pages` 分支
 
 ### 设置 gh-pages 作为 Source
 
-前往 Repo 的 Settings，点击 Pages， 将 Source 切换为 `Deploy from a branch`
-在 Brach 中选择 `gh-pages` 
+前往 Repo 的 Settings，点击 Pages， 将 Source 选择为 `Deploy from a branch`
+在 Brach 中选择 `gh-pages` ，点击 `save`
 
 ![Action Permission](https://m.nep.me/blog/post/vuepress-github-pages-source.png)
+
+在 `Actions` 可以查看 `pages build and deployment` 的运行状态，完成后即可访问 
+
+`https://username.github.io` 
+
+查看
 
 
 ## 添加自定义域名
