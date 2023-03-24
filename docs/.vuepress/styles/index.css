@@ -1,0 +1,35 @@
+/* 直角主义 */
+code {
+    border-radius: 2px !important;
+}
+
+.code-group {
+    border-radius: 0 !important;
+}
+
+div[class*=language-]{
+    border-radius: 0 !important;
+}
+
+.custom-container {
+    border-radius: 0 !important;
+}
+
+/* 给图片加个边框 */
+p > img {
+    margin: 0 auto;
+    border: 1px solid #dddddd15;;
+    border-radius: 0 !important;
+}
+/* 选中文字背景 */
+::selection {
+    background-color: #FF69B475;
+    color: #fff;
+}
+
+/* 右侧边栏宽度 */
+.page-catalog-container {
+    width: auto !important;
+    min-width: 14em !important;
+    max-width: 22em !important;
+}
