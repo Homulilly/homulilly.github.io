@@ -7,7 +7,7 @@ VuePress V2 版本还在开发中，尚未推出正式版。
 - 界面、样式美观 
 - 页面自动生成 `[TOC]`  
 
-**不过好像有点慢**
+预览 [NEP NOTE](https://nepnep.me)
 
 ## 安装 VuePress
 参考 [VuePress - 手动安装](https://v2.vuepress.vuejs.org/zh/guide/getting-started.html#%E6%89%8B%E5%8A%A8%E5%AE%89%E8%A3%85)
@@ -391,7 +391,7 @@ example.com
 
 点击 save 后，等待检查 DNS 生效就会保存成功。
 
-生效后访问一下域名就可以了。
+保存成功后访问对应域名即可。
 
 ::: tip Cloudflare
 域名是放在 Cloudflare 解析的话，如果提示解析出错，可以先暂停 Cloudflare 的 CDN

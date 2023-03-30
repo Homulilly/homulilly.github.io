@@ -22,6 +22,7 @@ export default defineUserConfig({
         ]
       },
       { text: '笔记', icon: 'Notebook', link: '/note/' },
+      { text: '书签', icon: 'Bookmark', link: '/bookmark/' },
       { text: 'MY Blog', icon: 'Blog', link: 'https://homulilly.com' },
       { text: 'Github', icon: 'LogoGithub', link: 'https://github.com/Homulilly/homulilly.github.io/' },
     ],
@@ -50,6 +51,14 @@ export default defineUserConfig({
             '/note/linux/systemd',
           ]
         }
+      ],
+      '/bookmark/': [{
+        text: 'BOOKMARK',
+        children: [
+          '/bookmark/app'
+        ]
+      }
+
       ]
     }
   })

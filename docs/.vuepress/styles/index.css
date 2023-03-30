@@ -1,6 +1,6 @@
 /* 直角主义 */
 code {
-    border-radius: 2px !important;
+    border-radius: 0 !important;
 }
 
 .code-group {
@@ -25,6 +25,10 @@ p > img {
 ::selection {
     background-color: #FF69B475;
     color: #fff;
+}
+
+.search-box input {
+    border-radius: 0 !important;
 }
 
 /* 右侧边栏宽度 */

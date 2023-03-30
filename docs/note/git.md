@@ -88,3 +88,22 @@ chmod +x post-receive
 
 chown -R git:git blog.git
 ```
+
+### Error
+
+Push 时提示下面的错误
+
+::: danger 
+```
+remote: error: The last gc run reported the following. Please correct the root cause
+remote: and remove gc.log.
+remote: Automatic cleanup will not be performed until the file is removed.
+remote:
+remote: warning: There are too many unreachable loose objects; run 'git prune' to remove them.
+```
+::: 
+
+进入 git 目录，运行下面的命令，然后重新 push
+```
+git gc --prune=now
+```
