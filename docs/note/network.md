@@ -77,7 +77,7 @@ else
 fi
 ```
 
-`crontab` -e 设置 每小时运行
+`crontab -e` 设置 每小时运行
 ```
 0 * * * * /pathto/100.sh
 ```
