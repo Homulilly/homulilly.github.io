@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-9aa5225a","path":"/note/linux/ssh-config.html","title":"SSH Config","lang":"zh-CN","frontmatter":{},"headers":[],"git":{"createdTime":1679640405000,"updatedTime":1679640405000,"contributors":[{"name":"Aroes","email":"nep@nep.me","commits":1}]},"filePathRelative":"note/linux/ssh-config.md"}');export{e as data};
