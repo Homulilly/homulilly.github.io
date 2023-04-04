@@ -4,6 +4,7 @@
 ### PAID
 - [Solid Explorer](https://play.google.com/store/apps/details?id=pl.solidexplorer2) `文件管理器`
 - [Flexbooru](https://play.google.com/store/apps/details?id=onlymash.flexbooru.play)  `APP for BooruSite`
+- [Niagara Launcher](https://play.google.com/store/apps/details?id=bitpit.launcher)  `桌面启动器`
 - [Money Manager](https://play.google.com/store/apps/details?id=com.realbyteapps.moneymanagerfree)  `记账`
 - [MX Player Pro](https://play.google.com/store/apps/details?id=com.mxtech.videoplayer.pro)  `视频播放器`
 - [JuiceSSH](https://play.google.com/store/apps/details?id=com.sonelli.juicessh)  `SSH Clent`
@@ -12,7 +13,6 @@
 - [AnkuLua](https://ankulua.boards.net/) `游戏脚本自动化` 
 
 ### FREE APP
-- [Niagara Launcher](https://play.google.com/store/apps/details?id=bitpit.launcher)  `桌面启动器`
 - [PixShaft](https://play.google.com/store/apps/details?id=ceui.lisa.pixiv)  `Pixiv第三方`
 - [Sorcery 图标](https://play.google.com/store/apps/details?id=com.sorcerer.sorcery.iconpack) `ICONS`
 
