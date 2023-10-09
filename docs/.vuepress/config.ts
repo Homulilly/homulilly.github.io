@@ -18,7 +18,7 @@ export default defineUserConfig({
         children: [
           {text: "VuePress 安装", link: `/vuepress`},
           {text: "VuePress 指南", link: `https://v2.vuepress.vuejs.org/zh/reference/config.html`},
-          {text: "VuePress-reco 指南", link: `http://v2.vuepress-reco.recoluan.com/docs/theme/series.html`},
+          {text: "VuePress-reco 指南", link: `https://vuepress-theme-reco.recoluan.com/`},
         ]
       },
       // { text: 'Kotlin', icon: 'Code', 
