@@ -21,12 +21,12 @@ export default defineUserConfig({
           {text: "VuePress-reco 指南", link: `http://v2.vuepress-reco.recoluan.com/docs/theme/series.html`},
         ]
       },
-      { text: 'Kotlin', icon: 'Code', 
-        children: [
-          {text: 'Desktop', link: '/kotlin/desktop/'},
-          {text: 'Documents', link: 'https://kotlinlang.org/docs/multiplatform.html'}
-        ], 
-      },
+      // { text: 'Kotlin', icon: 'Code', 
+      //   children: [
+      //     {text: 'Desktop', link: '/kotlin/desktop/'},
+      //     {text: 'Documents', link: 'https://kotlinlang.org/docs/multiplatform.html'}
+      //   ], 
+      // },
       { text: '笔记', icon: 'Notebook', link: '/note/' },
       { text: '书签', icon: 'Bookmark', link: '/bookmark/' },
       { text: 'Github', icon: 'LogoGithub', link: 'https://github.com/Homulilly/homulilly.github.io/' },
