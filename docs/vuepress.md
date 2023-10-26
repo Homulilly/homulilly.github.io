@@ -1,7 +1,7 @@
 # 使用 VuePress 建立一个知识笔记站点
 
 VuePress V2 版本还在开发中，尚未推出正式版。  
-使用该版本的原因是希望可以使用主题 [vuepress-reco](http://v2.vuepress-reco.recoluan.com/docs/guide/getting-started.html) 的 2.0 版本。
+使用该版本的原因是希望可以使用主题 [vuepress-reco](https://github.com/vuepress-reco/vuepress-theme-reco) 的 2.0 版本。
 
 `vuepress-reco` :  
 - 界面、样式美观 
@@ -73,7 +73,7 @@ export default defineUserConfig({
 
 ## 安装主题
 ### 手动安装
-参考 [vuepress-reco - 快速开始](http://v2.vuepress-reco.recoluan.com/docs/guide/getting-started.html)，选择手动安装的方法
+参考 [vuepress-reco - github](https://github.com/vuepress-reco/vuepress-theme-reco)，选择手动安装的方法
 
 ```sh
 yarn add vuepress-theme-reco@next
