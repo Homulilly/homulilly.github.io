@@ -1,4 +1,4 @@
-# Wireguard Setup Guide(Debian 11)
+# Wireguard Setup Guide(Debian)
 
 ## 安装
 
@@ -15,8 +15,13 @@ sysctl -w net.ipv6.conf.all.forwarding=1
 
 若需要重启后仍然生效记得将上述配置保存到 `/etc/sysctl.conf`
 
+```
+net.ipv4.ip_forward=1
+net.ipv6.conf.all.forwarding=1
+```
+
 ## 配置
-首先生成密钥对
+首先生成密钥对，每个客户端需要生产一对
 ```
 wg genkey | tee peer_A.key | wg pubkey > peer_A.pub
 ```

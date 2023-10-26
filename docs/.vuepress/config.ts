@@ -38,6 +38,7 @@ export default defineUserConfig({
           children: [ 
             '/note/git', 
             '/note/network',
+            '/note/win11',
           ]
         },
         {
@@ -51,6 +52,7 @@ export default defineUserConfig({
         {
           text: 'Linux',
           children: [
+            '/note/linux/config',
             '/note/linux/command',
             '/note/linux/ssh-config',
             '/note/linux/systemd',

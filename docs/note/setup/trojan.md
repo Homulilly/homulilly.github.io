@@ -1,5 +1,5 @@
 
-# Trojan
+# Trojan Setup
 
 ### 设置环境
 
