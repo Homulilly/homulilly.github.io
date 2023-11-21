@@ -15,11 +15,7 @@ export default defineUserConfig({
     navbar: [
       { text: 'VuePress',
         icon: 'List', 
-        children: [
-          {text: "VuePress 安装", link: `/vuepress`},
-          {text: "VuePress 指南", link: `https://v2.vuepress.vuejs.org/zh/reference/config.html`},
-          {text: "VuePress-reco 指南", link: `https://vuepress-theme-reco.recoluan.com/`},
-        ]
+        link: '/vuepress'
       },
       // { text: 'Kotlin', icon: 'Code', 
       //   children: [

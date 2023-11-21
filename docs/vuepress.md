@@ -1,7 +1,7 @@
 # 使用 VuePress 建立一个知识笔记站点
 
-VuePress V2 版本还在开发中，尚未推出正式版。  
-使用该版本的原因是希望可以使用主题 [vuepress-reco](https://github.com/vuepress-reco/vuepress-theme-reco) 的 2.0 版本。
+- [VuePress V2 设置指南](https://v2.vuepress.vuejs.org/zh/reference/config.html)
+- [VuePress Theme Reco - Github](https://github.com/vuepress-reco/vuepress-theme-reco)
 
 `vuepress-reco` :  
 - 界面、样式美观 
