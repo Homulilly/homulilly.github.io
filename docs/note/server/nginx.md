@@ -14,8 +14,6 @@ server {
     server_name www.example.com;
     return 301 https://example.com$request_uri;
 }
-
-
 ```
 
 ## Custom Error Pages
@@ -51,7 +49,7 @@ server {
     ssl_certificate_key $path-to-private.key;
 
     #no ssl v3
-    ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
+    ssl_protocols TLSv1.2 TLSv1.3;
     ssl_prefer_server_ciphers on;
     #sudo openssl dhparam -out /etc/ssl/certs/dhparam.pem 2048 or 4096
     ssl_dhparam /etc/ssl/certs/dhparam.pem;

@@ -7,11 +7,11 @@
 - [Niagara Launcher](https://play.google.com/store/apps/details?id=bitpit.launcher)  `桌面启动器`
 - [Money Manager](https://play.google.com/store/apps/details?id=com.realbyteapps.moneymanagerfree)  `记账`
 - [MX Player Pro](https://play.google.com/store/apps/details?id=com.mxtech.videoplayer.pro)  `视频播放器`
-- [JuiceSSH](https://play.google.com/store/apps/details?id=com.sonelli.juicessh)  `SSH Clent`
 - [Tasker](https://play.google.com/store/apps/details?id=net.dinglisch.android.taskerm)  `自动化`
 - [AnkuLua](https://ankulua.boards.net/) `游戏脚本自动化` 
+- ~~[JuiceSSH](https://play.google.com/store/apps/details?id=com.sonelli.juicessh)~~  `SSH Clent`，很久都没更新了 
 - ~~[Internet Speed Meter](https://play.google.com/store/apps/details?id=com.glitter.internetmeter)~~ `通知栏显示网速`，退役了
-- ~~[Fluid Navigation Gestures]()~~ `手势导航`，现在手机都自带了，退役了
+- ~~[Fluid Navigation Gestures](https://play.google.com/store/apps/details?id=com.fb.fluid)~~ `手势导航`，现在手机都自带了，退役了
 
 ### FREE APP
 - [PixShaft](https://play.google.com/store/apps/details?id=ceui.lisa.pixiv)  `Pixiv第三方`
