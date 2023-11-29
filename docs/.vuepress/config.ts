@@ -23,11 +23,21 @@ export default defineUserConfig({
       //     {text: 'Documents', link: 'https://kotlinlang.org/docs/multiplatform.html'}
       //   ], 
       // },
+      // { text: 'Android', icon: 'Code', link: '/android/codelab/' },
       { text: '笔记', icon: 'Notebook', link: '/note/' },
       { text: '书签', icon: 'Bookmark', link: '/bookmark/' },
       { text: 'Github', icon: 'LogoGithub', link: 'https://github.com/Homulilly/homulilly.github.io/' },
     ],
+    
     series: {
+      '/android/':[
+        {
+          text: 'Learn From 0',
+          children: [
+            '/android/codelab/kotlin-basic'
+          ]
+        }
+      ],
       '/note/': [
         {
           text: '笔记',
@@ -57,11 +67,10 @@ export default defineUserConfig({
       ],
       '/bookmark/': [{
         text: 'BOOKMARK',
-        children: [
-          '/bookmark/app'
-        ]
-      }
-
+          children: [
+            '/bookmark/app'
+          ]
+        }
       ],
       '/kotlin/':[{
         text: 'Base',

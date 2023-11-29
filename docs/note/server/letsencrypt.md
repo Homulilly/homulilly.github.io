@@ -30,3 +30,33 @@
   #renew certificates that expire in less than 30 days
   letsencrypt renew --pre-hook "service nginx stop" --post-hook "service nginx start"
   ```
+
+
+### 使用 acme.sh
+
+[acme.sh - Github](https://github.com/acmesh-official/acme.sh)
+
+安装  
+```sh
+curl https://get.acme.sh | sh -s email=my@example.com
+
+# 修改默认 CA 为 Letsencrypt
+acme.sh --set-default-ca --server letsencrypt
+```
+
+签发  
+```sh
+acme.sh --issue -d mydomain.com --nginx
+```
+
+使用 CloudFlare DNS 验证  
+```sh
+export CF_Key="key"
+
+export CF_Email="demo@example.com"
+
+acme.sh --issue -d example.com  -d '*.example.com'  --dns dns_cf
+--key-file       /path/to/keyfile/in/nginx/key.pem  \
+--fullchain-file /path/to/fullchain/nginx/cert.pem \
+--reloadcmd "service nginx force-reload"
+```

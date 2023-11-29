@@ -2,6 +2,7 @@
 
 - [VuePress V2 设置指南](https://v2.vuepress.vuejs.org/zh/reference/config.html)
 - [VuePress Theme Reco - Github](https://github.com/vuepress-reco/vuepress-theme-reco)
+- [VuePress Theme Reco - 指南](https://vuepress-theme-reco.recoluan.com/docs/guide/getting-started.html)
 
 `vuepress-reco` :  
 - 界面、样式美观 
@@ -402,3 +403,13 @@ CNAME 文件应该存在于在 `gh-pages` 分支，所以要前往 `.vuepress/pu
 域名是放在 Cloudflare 解析的话，如果提示解析出错，可以先暂停 Cloudflare 的 CDN
 :::
 
+## 升级
+
+### BETA -> rc.Release
+```bash
+yarn upgrade vuepress@next
+yarn upgrade vuepress-theme-reco@next
+```
+
+reco `v2.0.0.rc.1` / vuepress `v2.0.0-rc.0` [无法显示文章](https://github.com/vuepress-reco/vuepress-theme-reco/issues/257)
+:::
