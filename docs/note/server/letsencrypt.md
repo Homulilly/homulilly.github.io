@@ -51,11 +51,11 @@ acme.sh --issue -d mydomain.com --nginx
 
 使用 CloudFlare DNS 验证  
 ```sh
-export CF_Key="key"
+export CF_Token="[Token]"
+export CF_Account_ID="[Account_ID]"
+export CF_Zone_ID="[Zone_ID]"
 
-export CF_Email="demo@example.com"
-
-acme.sh --issue -d example.com  -d '*.example.com'  --dns dns_cf
+acme.sh --issue -d example.com  -d '*.example.com'  --dns dns_cf \
 --key-file       /path/to/keyfile/in/nginx/key.pem  \
 --fullchain-file /path/to/fullchain/nginx/cert.pem \
 --reloadcmd "service nginx force-reload"

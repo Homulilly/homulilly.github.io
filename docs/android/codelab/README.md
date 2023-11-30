@@ -7,3 +7,4 @@
 - [Kotlin 官方文档 中文版](https://book.kotlincn.net/)
 - [Compose Samples · Github](https://github.com/android/compose-samples)
 - [面向 Android 开发者的 Jetpack Compose](https://developer.android.com/courses/jetpack-compose/course?hl=zh-cn)
+- [第 3 单元：显示列表并使用 Material Design](https://developer.android.com/courses/android-basics-compose/unit-3?hl=zh-cn)

@@ -410,6 +410,20 @@ CNAME 文件应该存在于在 `gh-pages` 分支，所以要前往 `.vuepress/pu
 yarn upgrade vuepress@next
 yarn upgrade vuepress-theme-reco@next
 ```
-
+::: tip 
 reco `v2.0.0.rc.1` / vuepress `v2.0.0-rc.0` [无法显示文章](https://github.com/vuepress-reco/vuepress-theme-reco/issues/257)
+
+>在主题配置 `config.ts` 里添加以下内容即可
+```
+locales: {
+      // 键名是该语言所属的子路径
+      // 作为特例，默认语言可以使用 '/' 作为其路径。
+      '/': {
+        lang: 'zh-CN',
+        title: 'VuePress',
+        description: 'Vue 驱动的静态网站生成器',
+      },
+    },
+```
+![reco-rc1-error](https://m.nep.me/minio/d/blog/post/reco-rc1-error.png)
 :::
