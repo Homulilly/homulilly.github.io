@@ -3,14 +3,17 @@
 - [VuePress V2 设置指南](https://v2.vuepress.vuejs.org/zh/reference/config.html)
 - [VuePress Theme Reco - Github](https://github.com/vuepress-reco/vuepress-theme-reco)
 - [VuePress Theme Reco - 指南](https://vuepress-theme-reco.recoluan.com/docs/guide/getting-started.html)
-
-`vuepress-reco` :  
 - 界面、样式美观 
 - 页面自动生成 `[TOC]`  
+- 本文不使用主题自带的博客系统  
 
 预览 [NEP NOTE](https://nepnep.me)
 
 ## 安装 VuePress
+
+- **vuepress**: `v2.0.0.rc.0`
+- **vuepress-theme-reco**: `v2.0.0-rc.1`
+
 参考 [VuePress - 手动安装](https://v2.vuepress.vuejs.org/zh/guide/getting-started.html#%E6%89%8B%E5%8A%A8%E5%AE%89%E8%A3%85)
 
 ### 初始化
@@ -28,15 +31,19 @@ yarn add -D vuepress@next
 
 在 `package.json` 中添加一些 `scripts`
 
-`docs` 指的是存放文档的文件夹，可以随意命名
+`md` 指的是存放文档的文件夹，可以随意命名  
 ```json
 "scripts": {
-  "docs:dev": "vuepress dev docs",
-  "docs:build": "vuepress build docs"
+  "dev": "vuepress dev md",
+  "build": "vuepress build md"
 }
 ```
 
-即可使用 `yarn docs:dev` 替代 `yarn vuepress dev docs`    
+::: tip 踩坑
+主文件夹用 `docs` 会与自动生成侧栏冲突，使相关功能无法生效
+:::  
+
+即可使用 `yarn dev` 替代 `yarn vuepress dev md` 
 
 ### 创建文档
 
@@ -53,7 +60,7 @@ echo '# Hello VuePress' > note/README.md
 ### 预览
 
 ```sh
-yarn docs:dev
+yarn dev
 ```
 终端提示 `vite v4.1.4 dev server running at:` 后即可访问 [http://localhost:8080/](http://localhost:8080/) 查看预览 
 
@@ -94,7 +101,7 @@ export default defineUserConfig({
 })
 ``` 
 
-然后重新执行 `yarn docs:dev` 进行预览
+然后重新执行 `yarn dev` 进行预览
 
 ### 设置导航栏
 
@@ -131,8 +138,12 @@ export default defineUserConfig({
 
 ### 设置侧栏
 
-看主题文档说是可以自动设置： [自动设置系列(Series)](http://v2.vuepress-reco.recoluan.com/docs/theme/auto-set-series.html)  
-但是我设置后一开始并未生效，研究一下发现，需要在与 `.vuepress` 目录下建立一个 `docs` 文件夹，其下的文档可以自动生成，而且父文件夹也不能是 `docs`。 
+主题可以自动设置左侧侧栏： [自动设置系列(Series)](http://v2.vuepress-reco.recoluan.com/docs/theme/auto-set-series.html)  
+但是我设置后一开始并未生效，研究一下发现，需要在与 `.vuepress` 同目录建立一个 `docs` 文件夹，其下的文档可以自动生成，而且父文件夹也不能是 `docs`。  
+>然后在主题的配置文件中设置 `autoSetSeries: true` 即可   
+
+缺点是文档的链接都在 `docs` 路径下，例如 `https://exapmple.com/docs/xxx.html`  
+但是自动设置省心一些。  
 
 手动设置同样是编辑配置文件 `config.ts` ，reco 主题中侧边栏使用的是 `series: { }` ，可以放在 `navbar:[ ]` 的下面。
 ::: warning 不适用于VuePress的默认主题
@@ -325,7 +336,7 @@ jobs:
 
       # 运行构建脚本
       - name: Build VuePress site
-        run: yarn docs:build
+        run: yarn build
 
       # 查看 workflow 的文档来获取更多信息
       # @see https://github.com/crazy-max/ghaction-github-pages
@@ -335,7 +346,7 @@ jobs:
           # 部署到 gh-pages 分支
           target_branch: gh-pages
           # 部署目录为 VuePress 的默认输出目录
-          build_dir: docs/.vuepress/dist
+          build_dir: md/.vuepress/dist
         env:
           # @see https://docs.github.com/cn/actions/reference/authentication-in-a-workflow#about-the-github_token-secret
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -410,10 +421,11 @@ CNAME 文件应该存在于在 `gh-pages` 分支，所以要前往 `.vuepress/pu
 yarn upgrade vuepress@next
 yarn upgrade vuepress-theme-reco@next
 ```
-::: tip 
-reco `v2.0.0.rc.1` / vuepress `v2.0.0-rc.0` [无法显示文章](https://github.com/vuepress-reco/vuepress-theme-reco/issues/257)
+::: danger
+主题升级至 reco `v2.0.0.rc.1` / vuepress `v2.0.0-rc.0` 后 [无法显示文章](https://github.com/vuepress-reco/vuepress-theme-reco/issues/257)
+::: 
 
->在主题配置 `config.ts` 里添加以下内容即可
+在主题配置 `config.ts` 里添加以下内容即可，[图示](https://m.nep.me/blog/post/reco-rc1-error.png)
 ```
 locales: {
       // 键名是该语言所属的子路径
@@ -425,5 +437,3 @@ locales: {
       },
     },
 ```
-![reco-rc1-error](https://m.nep.me/minio/d/blog/post/reco-rc1-error.png)
-:::

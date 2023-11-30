@@ -1,4 +1,4 @@
-# Wireguard Setup Guide(Debian)
+# Wireguard Setup
 
 ## 安装
 

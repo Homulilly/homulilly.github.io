@@ -9,8 +9,8 @@
     "vuepress": "^2.0.0-rc.0"
   },
   "scripts": {
-    "dev": "vuepress dev docs",
-    "build": "vuepress build docs"
+    "dev": "vuepress dev md",
+    "build": "vuepress build md"
   },
   "dependencies": {
     "@vuepress-reco/theme-cli": "1.0.7",
