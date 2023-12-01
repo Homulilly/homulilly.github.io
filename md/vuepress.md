@@ -142,7 +142,7 @@ export default defineUserConfig({
 但是我设置后一开始并未生效，研究一下发现，需要在与 `.vuepress` 同目录建立一个 `docs` 文件夹，其下的文档可以自动生成，而且父文件夹也不能是 `docs`。  
 >然后在主题的配置文件中设置 `autoSetSeries: true` 即可   
 
-缺点是文档的链接都在 `docs` 路径下，例如 `https://exapmple.com/docs/xxx.html`  
+缺点是文档的链接都在 `docs` 路径下，例如 `https://example.com/docs/xxx.html`  
 但是自动设置省心一些。  
 
 手动设置同样是编辑配置文件 `config.ts` ，reco 主题中侧边栏使用的是 `series: { }` ，可以放在 `navbar:[ ]` 的下面。
@@ -426,7 +426,7 @@ yarn upgrade vuepress-theme-reco@next
 ::: 
 
 在主题配置 `config.ts` 里添加以下内容即可，[图示](https://m.nep.me/blog/post/reco-rc1-error.png)
-```
+```js
 locales: {
       // 键名是该语言所属的子路径
       // 作为特例，默认语言可以使用 '/' 作为其路径。
