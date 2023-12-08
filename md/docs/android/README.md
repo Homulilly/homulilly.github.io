@@ -13,26 +13,26 @@
     - Kotlin 简介
     - 设置 Android Studio
     - 构建基本布局
-- [第 2 单元：显示列表并使用 Material Design](https://developer.android.com/courses/android-basics-compose/unit-2?hl=zh-cn)
+- [第 2 单元：构建应用界面](https://developer.android.com/courses/android-basics-compose/unit-2?hl=zh-cn)
     - Kotlin 基础知识：条件语句、类与对象、函数类型、lambda 表达式
     - 与界面和状态交互
 - [第 3 单元：显示列表并使用 Material Design](https://developer.android.com/courses/android-basics-compose/unit-3?hl=zh-cn)
     - 更多 Kotlin 基础知识：泛型、对象、扩展、集合、高级函数
     - 构建可滚动列表： LazyColumn
     - 构建精美应用： Material 主题、动画
-- [第 4 单元：显示列表并使用 Material Design](https://developer.android.com/courses/android-basics-compose/unit-4?hl=zh-cn)
+- [第 4 单元：导航和应用架构](https://developer.android.com/courses/android-basics-compose/unit-4?hl=zh-cn)
     - 架构组件
     - Jetpack Compose 中的 Navigation
-- [第 5 单元：显示列表并使用 Material Design](https://developer.android.com/courses/android-basics-compose/unit-5?hl=zh-cn)
+- [第 5 单元：连接到互联网](https://developer.android.com/courses/android-basics-compose/unit-5?hl=zh-cn)
     - 从互联网获取数据
     - 加载并显示来自互联网的图片
-- [第 6 单元：显示列表并使用 Material Design](https://developer.android.com/courses/android-basics-compose/unit-6?hl=zh-cn)
+- [第 6 单元：数据持久性](https://developer.android.com/courses/android-basics-compose/unit-6?hl=zh-cn)
     - SQL 简介
     - 使用 Room 持久保留数据
     - 通过对 DataStore 使用键来存储和访问数据
-- [第 7 单元：显示列表并使用 Material Design](https://developer.android.com/courses/android-basics-compose/unit-7?hl=zh-cn)
+- [第 7 单元：WorkManager](https://developer.android.com/courses/android-basics-compose/unit-7?hl=zh-cn)
     - 使用 WorkManager 调度任务
-- [第 8 单元：显示列表并使用 Material Design](https://developer.android.com/courses/android-basics-compose/unit-8?hl=zh-cn)
+- [第 8 单元：Compose 中推出了 View](https://developer.android.com/courses/android-basics-compose/unit-8?hl=zh-cn)
     - Android View 和 View 中的 Compose
     - Compose 中的 View
 
