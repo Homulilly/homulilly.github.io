@@ -21,7 +21,7 @@
     - 构建可滚动列表： LazyColumn
     - 构建精美应用： Material 主题、动画
 - [第 4 单元：导航和应用架构](https://developer.android.com/courses/android-basics-compose/unit-4?hl=zh-cn)
-    - 架构组件：Activity 生命周期，[ViewModel](https://developer.android.com/codelabs/basic-android-kotlin-compose-viewmodel-and-state?hl=zh-cn#0)
+    - 架构组件：Activity 生命周期，[ViewModel](https://developer.android.com/codelabs/basic-android-kotlin-compose-viewmodel-and-state?hl=zh-cn#0)，单元测试
     - Jetpack Compose 中的 Navigation
 - [第 5 单元：连接到互联网](https://developer.android.com/courses/android-basics-compose/unit-5?hl=zh-cn)
     - 从互联网获取数据
