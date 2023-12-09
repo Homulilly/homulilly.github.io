@@ -8,8 +8,6 @@
 ### 基本命令
 - 显示状态：`systemctl status`
 - 显示激活的单元：`systemctl / systemctl list-units`
-
-
 - 控制与状态相关：`systemctl start/stop/reload/status <单元>`
 - 开机启动相关：`systemctl is-enabled/enable/disable <单元>`
 - 禁用与恢复：`systemctl mask/unmask <单元>`
