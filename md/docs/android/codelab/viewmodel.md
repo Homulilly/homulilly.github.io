@@ -22,6 +22,12 @@ data class GameUiState(
 
 创建 ViewModel `GameViewModel.kt`
 ```kotlin
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
+import androidx.lifecycle.viewmodel.compose.viewModel
+// ...
+
+@Composable
 class GameViewModel : ViewModel() {
     private val _uiState = MutableStateFlow(GameUiState())
     val uiState: StateFlow<GameUiState> = _uiState.asStateFlow()
@@ -38,6 +44,7 @@ class GameViewModel : ViewModel() {
 
 调用 `GameScreen.kt`
 ```kotlin
+@Composable
 fun GameScreen(
     gameViewModel: GameViewModel = viewModel()
 ){

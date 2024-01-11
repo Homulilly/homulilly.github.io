@@ -60,3 +60,12 @@ acme.sh --issue -d example.com  -d '*.example.com'  --dns dns_cf \
 --fullchain-file /path/to/fullchain/nginx/cert.pem \
 --reloadcmd "service nginx force-reload"
 ```
+
+
+# 单独安装证书
+```sh
+acme.sh --install-cert -d example.com \
+--key-file       /path/to/keyfile/in/nginx/key.pem  \
+--fullchain-file /path/to/fullchain/nginx/cert.pem \
+--reloadcmd     "service nginx force-reload"
+```

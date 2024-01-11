@@ -23,12 +23,13 @@
 - [第 4 单元：导航和应用架构](https://developer.android.com/courses/android-basics-compose/unit-4?hl=zh-cn)
     - 架构组件：Activity 生命周期，[ViewModel](https://developer.android.com/codelabs/basic-android-kotlin-compose-viewmodel-and-state?hl=zh-cn#0)，单元测试
     - Jetpack Compose 中的 Navigation
+    - 适应不同的屏幕尺寸
 - [第 5 单元：连接到互联网](https://developer.android.com/courses/android-basics-compose/unit-5?hl=zh-cn)
-    - 从互联网获取数据
+    - 从互联网获取数据：Kotlin 协程，[添加仓库和手动依赖项注入](https://developer.android.com/codelabs/basic-android-kotlin-compose-add-repository?hl=zh-cn)
     - 加载并显示来自互联网的图片
 - [第 6 单元：数据持久性](https://developer.android.com/courses/android-basics-compose/unit-6?hl=zh-cn)
     - SQL 简介
-    - 使用 Room 持久保留数据
+    - 使用 Room 持久保留数据: Kotlin Flow, Room
     - 通过对 DataStore 使用键来存储和访问数据
 - [第 7 单元：WorkManager](https://developer.android.com/courses/android-basics-compose/unit-7?hl=zh-cn)
     - 使用 WorkManager 调度任务
