@@ -18,10 +18,14 @@
 - [Sorcery 图标](https://play.google.com/store/apps/details?id=com.sorcerer.sorcery.iconpack) `ICONS`
 
 ## Windows
-- [Quciker](https://getquicker.net/) `快捷启动`
-- [Beyond Compore](https://www.scootersoftware.com/) `文件夹内容对比`
-- [Synergy](https://symless.com/synergy) `多设备鼠标同步`
+- ~~[Quciker](https://getquicker.net/)~~ `快捷启动`
+- [**Beyond Compore**](https://www.scootersoftware.com/) `文件夹内容对比`
+- [**Synergy**](https://symless.com/synergy) `多设备鼠标同步`
 - [LocalSend](https://localsend.org/) `局域网传输文件`
 - [Advanced Renamer](https://www.advancedrenamer.com/) `文件批量重命名`
-- [One Commander](https://www.onecommander.com/) `文件管理器`
+- [**One Commander**](https://www.onecommander.com/) `文件管理器`
 - [PotPlayer](https://potplayer.daum.net/) `视频播放器`
+- [FastCopy](https://fastcopy.jp/) `批量复制文件`
+- [Everything](https://www.voidtools.com/zh-cn/) `快速搜索文件`
+- [PixPin](https://pixpinapp.com/) `截图、录制 GIF`
+- CrystalDisk [Info](https://crystalmark.info/en/software/crystaldiskinfo/) [Mark](https://crystalmark.info/en/software/crystaldiskmark/) `查看磁盘信息、性能测试`
