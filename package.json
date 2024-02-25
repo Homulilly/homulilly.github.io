@@ -15,6 +15,6 @@
   "dependencies": {
     "@vuepress-reco/theme-cli": "1.0.7",
     "caniuse-lite": "^1.0.30001546",
-    "vuepress-theme-reco": "^2.0.0-rc.1"
+    "vuepress-theme-reco": "^2.0.0-rc.6"
   }
 }

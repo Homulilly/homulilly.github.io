@@ -12,7 +12,7 @@
 ## 安装 VuePress
 
 - **vuepress**: `v2.0.0.rc.0`
-- **vuepress-theme-reco**: `v2.0.0-rc.1`
+- **vuepress-theme-reco**: `v2.0.0-rc.6`
 
 参考 [VuePress - 手动安装](https://v2.vuepress.vuejs.org/zh/guide/getting-started.html#%E6%89%8B%E5%8A%A8%E5%AE%89%E8%A3%85)
 
@@ -414,13 +414,15 @@ CNAME 文件应该存在于在 `gh-pages` 分支，所以要前往 `.vuepress/pu
 域名是放在 Cloudflare 解析的话，如果提示解析出错，可以先暂停 Cloudflare 的 CDN
 :::
 
-## 升级
+## 更新
 
-### BETA -> rc.Release
+### 更新命令
 ```bash
 yarn upgrade vuepress@next
 yarn upgrade vuepress-theme-reco@next
 ```
+
+### BETA -> rc.Release
 ::: danger
 主题升级至 reco `v2.0.0.rc.1` / vuepress `v2.0.0-rc.0` 后 [无法显示文章](https://github.com/vuepress-reco/vuepress-theme-reco/issues/257)
 ::: 
@@ -437,3 +439,18 @@ locales: {
       },
     },
 ```
+主题升级至 reco `v2.0.0.rc.6` 可以删除
+
+### VuePress rc.0 -> rc.8
+::: danger
+主题升级至 reco `v2.0.0.rc.6` / vuepress `v2.0.0-rc.8` 后报错
+```
+yarn dev
+yarn run v1.22.19
+$ vuepress dev md
+error The bundler or theme option is missing. For more details: https://v2.vuepress.vuejs.org/guide/troubleshooting.html#the-bundler-theme-option-is-missing
+Done in 2.53s.
+```
+
+先用 vuepress `v2.0.0-rc.0`  >_>
+::: 
