@@ -1,7 +1,7 @@
 # SSH Config 
 
 ```bash
-Host A-Name
+Host $ip or $domain or $JustAName
   Hostname $ip or $domain
   User $username
   Port $port

@@ -5,6 +5,7 @@
 - [朱涛 · Kotlin 编程第一课 · 极客时间](https://time.geekbang.org/column/intro/100103401)
 - [Kotlin 官方文档 中文版](https://book.kotlincn.net/)
 - [Compose Samples · Github](https://github.com/android/compose-samples)
+- [https://developer.android.com/codelabs/jetpack-compose-theming?hl=zh-cn#0](https://developer.android.com/codelabs/jetpack-compose-theming?hl=zh-cn#0)
 - [面向 Android 开发者的 Jetpack Compose](https://developer.android.com/courses/jetpack-compose/course?hl=zh-cn)
 - ~~[Android Kotlin 基础知识 · Android Developer](https://developer.android.com/courses/kotlin-android-fundamentals/overview?hl=zh-cn)~~
 

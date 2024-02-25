@@ -15,19 +15,32 @@
 - 重载 Systemd：`systemctl daemon-reload`
 
 ### 单元文件内容
-如 ttrss 的示例：
+一个Systemd Service的服务配置文件大概长这样：
 ```bash
 [Unit]
-Description=ttrss_backend
-After=network.target mysql.service postgresql.service
+Description = some descriptions
+Documentation = man:xxx(8) man:xxx_config(5)
+Requires = xxx1.target xxx2.target
+After = yyy1.target yyy2.target
 
 [Service]
-User=www-data
-ExecStart=/path/to/tt-rss/update_daemon2.php
+Type = <TYPE>
+ExecStart = <CMD_for_START>
+ExecStop = <CMD_for_STOP>
+ExecReload = <CMD_for_RELOAD>
+Restart = <WHEN_TO_RESTART>
+RestartSec = <TIME>
 
 [Install]
-WantedBy=multi-user.target
+WantedBy = xxx.target yy.target
 ```
+
+一个 `.Service` 配置文件分为三部分：
+
+- **Unit**：定义该服务作为Unit角色时相关的属性
+- **Service**：定义本服务相关的属性
+- **Install**：定义本服务在设置服务开机自启动时相关的属性。换句话说，只有在创建/移除服务配置文件的软链接时，Install 段才会派上用场。这一配置段不是必须的，当未配置 [Install] 时，设置开机自启动或禁止开机自启动的操作将无任何效果
+
 #### `[Unit]` - 记录unit文件的通用信息
 - `Description`： 描述内容
 - `Requires`： 依赖的服务，若选择单元未启动，则本单元启动失败
@@ -50,3 +63,4 @@ WantedBy=multi-user.target
  - [Archwiki - Systemd](https://wiki.archlinux.org/index.php/systemd)
  - [编写systemd下服务脚本](http://blog.csdn.net/fu_wayne/article/details/38018825)
  - [Writing systemd service files](https://patrakov.blogspot.com/2011/01/writing-systemd-service-files.html)
+ - [Systemd系列文章](https://systemd-book.junmajinlong.com/service_1.html)

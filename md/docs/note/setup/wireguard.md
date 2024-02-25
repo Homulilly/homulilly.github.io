@@ -162,7 +162,7 @@ systemctl restart wg-quick@wg0.service
 systemctl enable wg-quick@wg0.service
 ```
 
-#### 设置配置文件修改，自动重新加载生效
+### 设置配置文件修改，自动重新加载生效
 
 WireGuard-UI 只负责配置信息生成。可以使用 systemd 来监视更改并重新加载配置，使新客户端配置自动生效。
 
