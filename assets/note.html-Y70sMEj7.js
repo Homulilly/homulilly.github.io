@@ -1,0 +1,12 @@
+import{_ as n,o as s,c as a,e}from"./app-pwymEAKl.js";const t={},i=e(`<h1 id="笔记" tabindex="-1"><a class="header-anchor" href="#笔记" aria-hidden="true">#</a> 笔记</h1><h3 id="intellij-手动导入依赖" tabindex="-1"><a class="header-anchor" href="#intellij-手动导入依赖" aria-hidden="true">#</a> IntelliJ 手动导入依赖</h3><p>未使用 Gradle 时，可以通过打开菜单 <code>文件</code> &gt; <code>项目结构</code> &gt; <code>模块</code>， 右侧点击 <code>依赖</code> 标签页， 再点击 <code>+</code>，选择 <code>库</code> &gt; <code>来自 Maven ...</code><br> 在弹出的窗口中，搜索依赖包名</p><h3 id="测试执行耗时" tabindex="-1"><a class="header-anchor" href="#测试执行耗时" aria-hidden="true">#</a> 测试执行耗时</h3><div class="language-kotlin line-numbers-mode" data-ext="kt"><pre class="language-kotlin"><code><span class="token keyword">import</span> kotlin<span class="token punctuation">.</span>system<span class="token punctuation">.</span>measureTimeMillis 
+
+<span class="token keyword">fun</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">val</span> time <span class="token operator">=</span> measureTimeMillis<span class="token punctuation">{</span>
+        runBlocking <span class="token punctuation">{</span>
+            <span class="token comment">//...</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token function">println</span><span class="token punctuation">(</span><span class="token string-literal singleline"><span class="token string">&quot;Execution time: </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">\${</span><span class="token expression">time <span class="token operator">/</span> <span class="token number">1000</span></span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token string"> seconds&quot;</span></span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>`,5),o=[i];function c(l,p){return s(),a("div",null,o)}const r=n(t,[["render",c],["__file","note.html.vue"]]);export{r as default};

@@ -1,0 +1,1 @@
+const a=JSON.parse('{"key":"v-d6476f86","path":"/docs/android/codelab/appbar.html","title":"AppBar - Material3Api","lang":"zh-CN","frontmatter":{},"headers":[],"git":{"createdTime":1704960096000,"updatedTime":1704960096000,"contributors":[{"name":"Aroes","email":"nep@nep.me","commits":1}]},"filePathRelative":"docs/android/codelab/appbar.md"}');export{a as data};

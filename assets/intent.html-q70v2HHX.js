@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-e1821b9a","path":"/docs/android/codelab/intent.html","title":"Share Intent","lang":"zh-CN","frontmatter":{},"headers":[],"git":{"createdTime":1704960096000,"updatedTime":1704960096000,"contributors":[{"name":"Aroes","email":"nep@nep.me","commits":1}]},"filePathRelative":"docs/android/codelab/intent.md"}');export{e as data};

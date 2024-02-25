@@ -1,0 +1,8 @@
+import{_ as e,o as a,c as s,e as n}from"./app-pwymEAKl.js";const i={},d=n(`<h1 id="base64-加解码" tabindex="-1"><a class="header-anchor" href="#base64-加解码" aria-hidden="true">#</a> Base64 加解码</h1><h3 id="加密" tabindex="-1"><a class="header-anchor" href="#加密" aria-hidden="true">#</a> 加密</h3><div class="language-bash line-numbers-mode" data-ext="sh"><pre class="language-bash"><code><span class="token builtin class-name">echo</span> <span class="token string">&quot;hello&quot;</span> <span class="token operator">|</span> base64
+
+aGVsbG8K
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>也可以使用 cat 加密文件中的内容</p><div class="language-text line-numbers-mode" data-ext="text"><pre class="language-text"><code>cat file | base64
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><h3 id="解密" tabindex="-1"><a class="header-anchor" href="#解密" aria-hidden="true">#</a> 解密</h3><div class="language-bash line-numbers-mode" data-ext="sh"><pre class="language-bash"><code><span class="token builtin class-name">echo</span> <span class="token string">&quot;aGVsbG8K&quot;</span> <span class="token operator">|</span> base64 <span class="token parameter variable">-d</span>
+
+hello
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>`,7),l=[d];function r(t,c){return a(),s("div",null,l)}const h=e(i,[["render",r],["__file","base64.html.vue"]]);export{h as default};
