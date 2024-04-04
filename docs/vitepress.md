@@ -124,7 +124,7 @@ export default DefaultTheme
 查看 [默认主题 CSS 变量](https://github.com/vuejs/vitepress/blob/main/src/client/theme-default/styles/vars.css) 来获取可以被覆盖的变量。
 
 ## 部署到 Github Pages
-### public 文件下创建 CNAME 文件
+### public 文件夹下创建 CNAME 文件
 ### 设置 .gitignore
 ```txt
 /coverage
@@ -148,7 +148,8 @@ config.mts.timestamp-*
 ```
 
 ### 编写 `workflows` 文件
-`.github/workflows/build-pages-vite.yml`  
+可以直接使用 Github 的 workflows 功能，当我们把文档源文件备份到 Github 时，自动更新 Github Pages。  
+在项目根目录下创建 `.github/workflows/build-pages-vite.yml` 即可。  
 ```yml
 name: build-pages-vite
 
@@ -164,19 +165,19 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           # “最近更新时间” 等 git 日志相关信息，需要拉取全部提交记录
           fetch-depth: 0
 
       - name: Setup Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           # 选择要使用的 node 版本
-          node-version: 18
+          node-version: 20
           
       - name: Run install
-        uses: borales/actions-yarn@v4
+        uses: borales/actions-yarn@v5
         with:
           cmd: install # will run `yarn install` command
 
@@ -187,7 +188,7 @@ jobs:
       # 查看 workflow 的文档来获取更多信息
       # @see https://github.com/crazy-max/ghaction-github-pages
       - name: Deploy to GitHub Pages
-        uses: crazy-max/ghaction-github-pages@v3
+        uses: crazy-max/ghaction-github-pages@v4
         with:
           # 部署到 gh-pages 分支
           target_branch: gh-pages
