@@ -148,14 +148,14 @@ config.mts.timestamp-*
 ```
 
 ### 编写 `workflows` 文件
-`.github/workflows/builf-pages.yml`  
+`.github/workflows/build-pages-vite.yml`  
 ```yml
-name: build-pages
+name: build-pages-vite
 
 on:
   # 每当 push 到 main 分支时触发部署
   push:
-    branches: [main]
+    branches: [vitepress]
   # 手动触发部署
   workflow_dispatch:
 
