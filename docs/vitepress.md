@@ -151,12 +151,12 @@ config.mts.timestamp-*
 可以直接使用 Github 的 workflows 功能，当我们把文档源文件备份到 Github 时，自动更新 Github Pages。  
 在项目根目录下创建 `.github/workflows/build-pages-vite.yml` 即可。  
 ```yml
-name: build-pages-vite
+name: build-pages
 
 on:
   # 每当 push 到 main 分支时触发部署
   push:
-    branches: [vitepress]
+    branches: [main]
   # 手动触发部署
   workflow_dispatch:
 
