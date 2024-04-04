@@ -3,6 +3,8 @@
 ## Android
 ### PAID
 - [Solid Explorer](https://play.google.com/store/apps/details?id=pl.solidexplorer2) `文件管理器`
+- [Miraa](https://play.google.com/store/apps/details?id=com.myoland.miraa) `AI 语音转文字`
+- [Duolingo](https://play.google.com/store/search?q=Duolingo) `语言学习`
 - [Flexbooru](https://play.google.com/store/apps/details?id=onlymash.flexbooru.play)  `APP for BooruSite`
 - [Niagara Launcher](https://play.google.com/store/apps/details?id=bitpit.launcher)  `桌面启动器`
 - [Money Manager](https://play.google.com/store/apps/details?id=com.realbyteapps.moneymanagerfree)  `记账`
@@ -14,12 +16,15 @@
 - ~~[Fluid Navigation Gestures](https://play.google.com/store/apps/details?id=com.fb.fluid)~~ `手势导航`，现在手机都自带了，退役了
 
 ### FREE APP
+- [Termux](https://termux.dev/cn/index.html) `终端模拟器` 强大
 - [PixShaft](https://play.google.com/store/apps/details?id=ceui.lisa.pixiv)  `Pixiv第三方`
 - [Sorcery 图标](https://play.google.com/store/apps/details?id=com.sorcerer.sorcery.iconpack) `ICONS`
 
+
 ## Windows
-- ~~[Quciker](https://getquicker.net/)~~ `快捷启动`
-- [**Beyond Compore**](https://www.scootersoftware.com/) `文件夹内容对比`
+- [Obsidian](https://obsidian.md/) `知识仓库` 强大
+- [Vivaldi](https://vivaldi.com/zh-hans/) `浏览器`
+- [**Beyond Compare**](https://www.scootersoftware.com/) `文件夹内容对比`
 - [**Synergy**](https://symless.com/synergy) `多设备鼠标同步`
 - [LocalSend](https://localsend.org/) `局域网传输文件`
 - [Advanced Renamer](https://www.advancedrenamer.com/) `文件批量重命名`
@@ -29,3 +34,4 @@
 - [Everything](https://www.voidtools.com/zh-cn/) `快速搜索文件`
 - [PixPin](https://pixpinapp.com/) `截图、录制 GIF`
 - CrystalDisk [Info](https://crystalmark.info/en/software/crystaldiskinfo/) [Mark](https://crystalmark.info/en/software/crystaldiskmark/) `查看磁盘信息、性能测试`
+- ~~[Quciker](https://getquicker.net/)~~ `快捷启动`

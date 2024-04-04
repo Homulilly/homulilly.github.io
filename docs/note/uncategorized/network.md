@@ -1,6 +1,4 @@
----
-title: Network
----
+# Network
 
 ## 添加静态路由
 ### ip

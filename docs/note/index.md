@@ -25,32 +25,23 @@
 :::
 ```  
 
-### 代码组
+::: tip
+这是一个提示
+:::
 
-````md
-:::: code-group
-::: code-group-item FOO
-```js
-const foo = 'foo'
-```
+::: info
+这是一个提示
 :::
-::: code-group-item BAR
-```js
-const bar = 'bar'
-```
-:::
-::::
-````
 
-:::: code-group
-::: code-group-item FOO
-```js
-const foo = 'foo'
-```
+::: warning
+这是一个警告
 :::
-::: code-group-item BAR
-```js
-const bar = 'bar'
-```
+
+::: danger
+这是一个危险警告
 :::
-::::
+
+# 折叠显示
+::: details
+这是一个 details 标签
+:::

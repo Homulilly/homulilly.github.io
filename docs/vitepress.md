@@ -32,8 +32,8 @@ export default defineConfig({
     plugins: [
       // add plugin
       AutoSidebar({
-        // You can also set options to adjust sidebar data
-        // see option document below
+        // 自动从文档内读取标题
+        titleFromFile: true
       })
     ]
   },
