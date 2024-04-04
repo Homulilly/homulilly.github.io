@@ -9,6 +9,8 @@ export default defineConfig({
       AutoSidebar({
         // You can also set options to adjust sidebar data
         // see option document below
+        // https://github.com/QC2168/vite-plugin-vitepress-auto-sidebar
+        titleFromFile: true
       })
     ]
   },
