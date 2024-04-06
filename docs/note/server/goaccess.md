@@ -10,7 +10,7 @@ sudo apt install goaccess
 
 将下面的配置添加到 `/etc/goaccess.conf` 中
 
-```conf
+```txt
 color_scheme 1
 time-format %H:%M:%S
 date_format %d/%b/%Y
@@ -20,7 +20,7 @@ log_format %h %^[%d:%^] "%r" %s %b "%R" "%u"
 
 ### 使用方法
 
-```
+```sh
 goaccess -f /var/log/nginx/access.log
 cat /var/log/nginx/access.log | goaccess > output.html
 #for access.log.*.gz
