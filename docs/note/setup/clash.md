@@ -154,6 +154,8 @@ WantedBy=multi-user.target
 ### 设置开机自启
 
 ```bash
+systemctl daemon-reload
+
 # 开机启动
 systemctl enable clash
 

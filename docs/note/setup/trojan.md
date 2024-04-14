@@ -38,7 +38,7 @@ vim config.json
 
 ### 启动 
 
-创建 Systemd 文件
+创建 Systemd 文件 `/etc/systemd/system/trojan.service`
 ```bash
 [Unit]  
 Description=trojan  
@@ -58,5 +58,11 @@ WantedBy=multi-user.target
 
 启动
 ```sh
+systemctl daemon-reload
+
+# 开机自启
+systemctl enable trojan
+
+# 启动
 systemctl start trojan
 ```

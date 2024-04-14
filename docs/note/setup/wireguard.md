@@ -4,7 +4,7 @@
 ### 安装
 
 ```sh
-apt install wireguard
+apt install wireguard iptables openresolv
 ```
 
 ### 开启系统转发
@@ -22,13 +22,13 @@ net.ipv6.conf.all.forwarding=1
 ```
 
 ### 配置
-首先生成密钥对，每个客户端需要生产一对
+首先生成密钥对，每个客户端需要生产一对，服务器自己也算一个客户端
 ```
 wg genkey | tee peer_A.key | wg pubkey > peer_A.pub
 ```
 
-服务端创建并编辑 `/etc/wireguard/wg0.conf` ，内容如下： 
-
+服务端创建并编辑 `/etc/wireguard/wg0.conf` ，内容如下：   
+可以先执行 `ip` 查看网卡名称  
 ```
 [Interface]
 ListenPort = 51820
@@ -50,6 +50,11 @@ AllowedIPs = 10.1.1.100/32
 wg-quick up wg0
 ```
 
+如果提示 `resolvconf: command not found`
+```
+sudo apt install openresolv
+```
+
 设置开机自启
 ```
 systemctl enable wg-quick@wg0
@@ -65,11 +70,13 @@ wg
 [Interface]
 PrivateKey = <Client PrivateKey>
 Address = 10.1.1.100/32
+MTU = 1392
+DNS = 223.5.5.5
 
 [Peer]
 PublicKey = <Server PublicKey>
 Endpoint = <Server IP>:<Port>
-AllowedIPs = 0.0.0.0/0
+AllowedIPs = 0.0.0.0/0, ::/0
 ```
 
 ## WireGuard UI
