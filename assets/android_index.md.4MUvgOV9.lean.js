@@ -1,0 +1,1 @@
+import{_ as e,c as r,o,a4 as l}from"./chunks/framework.4aTu-Nia.js";const f=JSON.parse('{"title":"Android","description":"","frontmatter":{},"headers":[],"relativePath":"android/index.md","filePath":"android/index.md"}'),i={name:"android/index.md"},a=l("",4),n=[a];function t(d,s,c,h,p,m){return o(),r("div",null,n)}const _=e(i,[["render",t]]);export{f as __pageData,_ as default};
