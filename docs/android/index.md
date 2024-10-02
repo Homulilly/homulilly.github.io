@@ -1,22 +1,42 @@
 # Android
 
+
+## Steps
+
 - [Android 之 Compose 开发基础 · Android Developer](https://developer.android.com/courses/android-basics-compose/course?hl=zh-cn)  
 - [2021Android从零入门到实战(Kotlin最新版) · 哔哩哔哩](https://www.bilibili.com/video/BV1264y1474A/)
 - [朱涛 · Kotlin 编程第一课 · 极客时间](https://time.geekbang.org/column/intro/100103401)
 - [Kotlin 官方文档 中文版](https://book.kotlincn.net/)
 - [Compose Samples · Github](https://github.com/android/compose-samples)
-- [https://developer.android.com/codelabs/jetpack-compose-theming?hl=zh-cn#0](https://developer.android.com/codelabs/jetpack-compose-theming?hl=zh-cn#0)
+- [使用 Material 3 在 Compose 中设置主题](https://developer.android.com/codelabs/jetpack-compose-theming?hl=zh-cn#0)
 - [面向 Android 开发者的 Jetpack Compose](https://developer.android.com/courses/jetpack-compose/course?hl=zh-cn)
-- ~~[Android Kotlin 基础知识 · Android Developer](https://developer.android.com/courses/kotlin-android-fundamentals/overview?hl=zh-cn)~~
+- [Android Kotlin 基础知识 · Android Developer](https://developer.android.com/courses/kotlin-android-fundamentals/overview?hl=zh-cn) ： Activity / ViewModel / LiveData
 
-**ANDROID 之 COMPOSE 开发基础**  
+## ANDROID 之 COMPOSE 开发基础 
+
+单元知识点
+
 - [第 1 单元：您的首个 Android 应用](https://developer.android.com/courses/android-basics-compose/unit-1?hl=zh-cn)
     - Kotlin 简介
-    - 设置 Android Studio
+    - 设置 Android Studio，创建并运行首个 Android 应用
+        - 更新文本、背景颜色、设置边距
     - 构建基本布局
+        - 创建一个贺卡应用
 - [第 2 单元：构建应用界面](https://developer.android.com/courses/android-basics-compose/unit-2?hl=zh-cn)
-    - Kotlin 基础知识：条件语句、类与对象、函数类型、lambda 表达式
-    - 与界面和状态交互
+    - Kotlin 基础知识
+        - 条件语句： if / when
+        - 类与对象： 类的定义、创建实例、构造函数、类之间的关系、可见性修饰符、属性委托
+        - 函数类型
+        - lambda 表达式
+    - 与界面和状态交互  
+    
+| 修饰符   | 可在相同类中访问 | 可在子类中访问 | 可在相同模块中访问 | 可在模块之外访问 |
+|----------|------------------|----------------|--------------------|------------------|
+| private  | ✔                | 𝗫              | 𝗫                  | 𝗫                |
+| protected| ✔                | ✔              | 𝗫                  | 𝗫                |
+| internal | ✔                | ✔              | ✔                  | 𝗫                |
+| public   | ✔                | ✔              | ✔                  | ✔                |
+
 - [第 3 单元：显示列表并使用 Material Design](https://developer.android.com/courses/android-basics-compose/unit-3?hl=zh-cn)
     - 更多 Kotlin 基础知识：泛型、对象、扩展、集合、高级函数
     - 构建可滚动列表： LazyColumn
