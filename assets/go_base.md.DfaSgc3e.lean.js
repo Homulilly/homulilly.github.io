@@ -1,0 +1,1 @@
+import{_ as s,c as a,o as i,a4 as n}from"./chunks/framework.4aTu-Nia.js";const E=JSON.parse('{"title":"Go 基础","description":"","frontmatter":{},"headers":[],"relativePath":"go/base.md","filePath":"go/base.md"}'),e={name:"go/base.md"},l=n("",50),t=[l];function p(h,d,r,k,c,o){return i(),a("div",null,t)}const b=s(e,[["render",p]]);export{E as __pageData,b as default};
