@@ -40,7 +40,7 @@
 - [第 3 单元：显示列表并使用 Material Design](https://developer.android.com/courses/android-basics-compose/unit-3?hl=zh-cn)
     - 更多 Kotlin 基础知识：泛型、对象、扩展、集合、高级函数
     - 构建可滚动列表： LazyColumn
-    - 构建精美应用： Material 主题、动画
+    - 构建精美应用： Material Design 主题、动画
 - [第 4 单元：导航和应用架构](https://developer.android.com/courses/android-basics-compose/unit-4?hl=zh-cn)
     - 架构组件：Activity 生命周期，[ViewModel](https://developer.android.com/codelabs/basic-android-kotlin-compose-viewmodel-and-state?hl=zh-cn#0)，单元测试
     - Jetpack Compose 中的 Navigation
