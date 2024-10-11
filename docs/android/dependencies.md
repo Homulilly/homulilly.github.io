@@ -38,7 +38,7 @@ androidx-lifecycle-viewmodel-compose = { group = "androidx.lifecycle", name = "l
 implementation(libs.androidx.lifecycle.viewmodel.compose)
 ```
 
-### Compose Navigation
+## Compose Navigation
 `libs.versions.toml`
 ```toml
 [versions]
@@ -51,6 +51,33 @@ androidx-lifecycle-viewmodel-compose = { group = "androidx.lifecycle", name = "l
 `build.gradle.kts (Module: app)` > `dependencies`
 ```kotlin
 implementation(libs.androidx.lifecycle.viewmodel.compose)
+```
+
+## Retrofit
+`libs.versions.toml`
+```toml
+[versions]
+# Retrofit with kotlinx.serialization
+okhttp="4.12.0"
+retrofit="2.9.0"
+kotlinxSerializationJson = "1.6.3"
+retrofit2KotlinxSerializationConverter = "1.0.0"
+
+[libraries]
+okhttp = { group = "com.squareup.okhttp3", name = "okhttp", version.ref = "okhttp" }
+retrofit = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit" }
+# kotlinx-serialization
+kotlinx-serialization-json = { group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-json", version.ref = "kotlinxSerializationJson" }
+retrofit2-kotlinx-serialization-converter = { group = "com.jakewharton.retrofit", name = "retrofit2-kotlinx-serialization-converter", version.ref = "retrofit2KotlinxSerializationConverter" }
+```
+
+`build.gradle.kts (Module: app)` > `dependencies`
+```kotlin
+    // retrofit
+    implementation(libs.okhttp)
+    implementation(libs.retrofit)
+    implementation(libs.kotlinx.serialization.json)
+    implementation(libs.retrofit2.kotlinx.serialization.converter)
 ```
 
 ## Hilt
