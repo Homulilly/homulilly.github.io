@@ -62,6 +62,8 @@ okhttp="4.12.0"
 retrofit="2.9.0"
 kotlinxSerializationJson = "1.6.3"
 retrofit2KotlinxSerializationConverter = "1.0.0"
+# plugin-kotlin-serialization
+kotlin = "2.0.20"
 
 [libraries]
 okhttp = { group = "com.squareup.okhttp3", name = "okhttp", version.ref = "okhttp" }
@@ -69,6 +71,13 @@ retrofit = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = 
 # kotlinx-serialization
 kotlinx-serialization-json = { group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-json", version.ref = "kotlinxSerializationJson" }
 retrofit2-kotlinx-serialization-converter = { group = "com.jakewharton.retrofit", name = "retrofit2-kotlinx-serialization-converter", version.ref = "retrofit2KotlinxSerializationConverter" }
+
+[plugins]
+kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "serialization"}
+```
+`build.gradle.kts (Module: app)` > `plugins`
+```kotlin
+alias(libs.plugins.kotlin.serialization)
 ```
 
 `build.gradle.kts (Module: app)` > `dependencies`
@@ -127,3 +136,22 @@ implementation(libs.bundles.hilt)
 ksp(libs.bundles.hilt.ksp)
 ```
 
+## Coil
+```kotlin
+implementation("io.coil-kt:coil-compose:2.7.0")
+```
+
+`libs.versions.toml` 
+```toml
+[versions]
+# coil
+coil-compose="2.7.0"
+
+[libraries]
+coil-compose = { group = "io.coil-kt", name = "coil-compose", version.ref = "coil-compose" }
+```
+
+`build.gradle.kts (Module: app)` > `dependencies`
+```kotlin
+implementation(libs.coil.compose)
+```
