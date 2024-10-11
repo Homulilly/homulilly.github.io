@@ -59,7 +59,9 @@ export default defineConfig({
       // add plugin
       AutoSidebar({
         // 自动从文档内读取标题
-        titleFromFile: true
+        titleFromFile: true,
+        // 忽略显示 index.md
+        ignoreIndexItem: true
       })
     ]
   },
