@@ -2,12 +2,12 @@
 
 Dependencies with Version Catalogs 
 
-## 测试
+## Android TEST
 
 `libs.versions.toml`
 ```toml
 [versions]
-# junit Android Studio 2024.2.1 默认项目自带
+# junit Android Studio 2024.2.1 项目自带
 junit = "4.13.2"
 # kotlinxCoroutinesTest
 kotlinxCoroutinesTest = "1.8.1"
@@ -38,19 +38,19 @@ androidx-lifecycle-viewmodel-compose = { group = "androidx.lifecycle", name = "l
 implementation(libs.androidx.lifecycle.viewmodel.compose)
 ```
 
-## Compose Navigation
+## Compose Navigatgion
 `libs.versions.toml`
 ```toml
 [versions]
-lifecycleViewModelCompose="2.8.6"
+navigationCompose = "2.8.2" 
 
 [libraries]
-androidx-lifecycle-viewmodel-compose = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-compose", version.ref = "lifecycleViewModelCompose" }
+androidx-navigation-compose = { group = "androidx.navigation", name = "navigation-compose", version.ref = "navigationCompose" }
 ```
 
 `build.gradle.kts (Module: app)` > `dependencies`
 ```kotlin
-implementation(libs.androidx.lifecycle.viewmodel.compose)
+implementation(libs.androidx.navigation.compose)
 ```
 
 ## Retrofit
@@ -60,20 +60,23 @@ implementation(libs.androidx.lifecycle.viewmodel.compose)
 # Retrofit with kotlinx.serialization
 okhttp="4.12.0"
 retrofit="2.9.0"
-kotlinxSerializationJson = "1.6.3"
 retrofit2KotlinxSerializationConverter = "1.0.0"
 # plugin-kotlin-serialization
 kotlin = "2.0.20"
+kotlinxSerializationJson = "1.6.3"
 
 [libraries]
 okhttp = { group = "com.squareup.okhttp3", name = "okhttp", version.ref = "okhttp" }
 retrofit = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit" }
+retrofit-converter = { group = "com.jakewharton.retrofit", name = "retrofit2-kotlinx-serialization-converter", version.ref = "retrofit2KotlinxSerializationConverter" }
 # kotlinx-serialization
 kotlinx-serialization-json = { group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-json", version.ref = "kotlinxSerializationJson" }
-retrofit2-kotlinx-serialization-converter = { group = "com.jakewharton.retrofit", name = "retrofit2-kotlinx-serialization-converter", version.ref = "retrofit2KotlinxSerializationConverter" }
 
 [plugins]
 kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "serialization"}
+
+[bundles]
+retrofit = ['okhttp', 'retrofit', 'retrofit-converter']
 ```
 `build.gradle.kts (Module: app)` > `plugins`
 ```kotlin
@@ -82,11 +85,9 @@ alias(libs.plugins.kotlin.serialization)
 
 `build.gradle.kts (Module: app)` > `dependencies`
 ```kotlin
-    // retrofit
-    implementation(libs.okhttp)
-    implementation(libs.retrofit)
-    implementation(libs.kotlinx.serialization.json)
-    implementation(libs.retrofit2.kotlinx.serialization.converter)
+// retrofit
+implementation(libs.bundles.retrofit)
+implementation(libs.kotlinx.serialization.json)
 ```
 
 ## Hilt
@@ -153,5 +154,90 @@ coil-compose = { group = "io.coil-kt", name = "coil-compose", version.ref = "coi
 
 `build.gradle.kts (Module: app)` > `dependencies`
 ```kotlin
+implementation(libs.coil.compose)
+```
+
+## Merge
+
+- **lifecycleViewModel**
+- **Retrofit** with kotlinx.serialization : HTTP/REST
+- **hilt** : 依赖注入
+- **coil** : Show Image
+
+`libs.versions.toml` 
+```toml
+[versions] 
+kotlin = "2.0.20"
+# viewModel Compose
+lifecycleViewModelCompose="2.8.6"
+# ksp
+ksp="2.0.20-1.0.24"
+# hilt
+hilt="2.51.1"
+hiltCommon="1.2.0"
+# retrofit
+okhttp="4.12.0"
+retrofit="2.9.0"
+retrofit2KotlinxSerializationConverter = "1.0.0"
+# SerializationJson 
+kotlinxSerializationJson = "1.6.3"
+# coil
+coil-compose="2.7.0"
+
+
+[libraries]
+# viewModel Compose
+androidx-lifecycle-viewmodel-compose = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-compose", version.ref = "lifecycleViewModelCompose" }
+# hilt
+hilt-android = { group = "com.google.dagger", name = "hilt-android", version.ref = "hilt" }
+hilt-android-compiler = { group = "com.google.dagger", name = "hilt-compiler", version.ref = "hilt" }
+androidx-hilt-common = { group = "androidx.hilt", name = "hilt-common", version.ref = "hiltCommon" }
+androidx-hilt-compiler = { group = "androidx.hilt", name = "hilt-compiler", version.ref = "hiltCommon" }
+androidx-hilt-navigation-compose = { group = "androidx.hilt", name = "hilt-navigation-compose", version.ref = "hiltCommon" }
+# retrofit
+okhttp = { group = "com.squareup.okhttp3", name = "okhttp", version.ref = "okhttp" }
+retrofit = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit" }
+retrofit-converter = { group = "com.jakewharton.retrofit", name = "retrofit2-kotlinx-serialization-converter", version.ref = "retrofit2KotlinxSerializationConverter" }
+# kotlinx-serialization
+kotlinx-serialization-json = { group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-json", version.ref = "kotlinxSerializationJson" }
+# coil
+coil-compose = { group = "io.coil-kt", name = "coil-compose", version.ref = "coil-compose" }
+
+
+[plugins]
+# kotlin.serialization
+kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin"}
+# ksp
+google-ksp = { id = "com.google.devtools.ksp", version.ref = "ksp"}
+android-hilt = { id = "com.google.dagger.hilt.android", version.ref = "hilt"}
+
+[bundles]
+retrofit = ['okhttp', 'retrofit', 'retrofit-converter']
+hilt = ["hilt-android", "androidx-hilt-common", "androidx-hilt-navigation-compose"]
+hilt-ksp = ["hilt-android-compiler", "androidx-hilt-compiler"]
+```
+
+`build.gradle.kts (Project)` > `plugins` 
+```kotlin
+alias(libs.plugins.google.ksp) apply false
+alias(libs.plugins.android.hilt) apply false
+```
+
+`build.gradle.kts (Module: app)` > `plugins`
+```kotlin
+alias(libs.plugins.google.ksp)
+alias(libs.plugins.android.hilt)
+alias(libs.plugins.kotlin.serialization)
+```
+
+`build.gradle.kts (Module: app)` > `dependencies`
+```kotlin
+implementation(libs.androidx.lifecycle.viewmodel.compose)
+// Hilt
+implementation(libs.bundles.hilt)
+// retrofit
+implementation(libs.bundles.retrofit)
+implementation(libs.kotlinx.serialization.json)
+// coil
 implementation(libs.coil.compose)
 ```

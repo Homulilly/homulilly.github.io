@@ -30,7 +30,7 @@ export default defineConfig({
     logo: '/assets/logo.png',
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'VitePress', link: 'https://vitepress.dev/zh/'},
+      { text: 'Android', link: '/android/' },
       { text: '笔记', link: '/note/' },
       { text: '书签', link: '/bookmark/' }
     ],

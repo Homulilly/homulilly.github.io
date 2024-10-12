@@ -42,8 +42,8 @@
     - Jetpack Compose 中的 Navigation
     - 适应不同的屏幕尺寸
 - [第 5 单元：连接到互联网](https://developer.android.com/courses/android-basics-compose/unit-5?hl=zh-cn)
-    - 从互联网获取数据：Kotlin 协程，[添加仓库和手动依赖项注入](https://developer.android.com/codelabs/basic-android-kotlin-compose-add-repository?hl=zh-cn)
-    - 加载并显示来自互联网的图片
+    - 从互联网获取数据：Kotlin 协程，`Retrofit`，`kotlin.serialization`
+    - 加载并显示来自互联网的图片 [添加仓库和手动依赖项注入](https://developer.android.com/codelabs/basic-android-kotlin-compose-add-repository?hl=zh-cn), `Coil`
 - [第 6 单元：数据持久性](https://developer.android.com/courses/android-basics-compose/unit-6?hl=zh-cn)
     - SQL 简介
     - 使用 Room 持久保留数据: Kotlin Flow, Room
