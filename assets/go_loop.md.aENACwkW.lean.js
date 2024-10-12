@@ -1,0 +1,1 @@
+import{_ as s,c as i,o as a,a4 as n}from"./chunks/framework.4aTu-Nia.js";const c=JSON.parse('{"title":"Go 循环结构","description":"","frontmatter":{},"headers":[],"relativePath":"go/loop.md","filePath":"go/loop.md"}'),l={name:"go/loop.md"},e=n("",14),p=[e];function h(t,k,r,d,E,o){return a(),i("div",null,p)}const u=s(l,[["render",h]]);export{c as __pageData,u as default};

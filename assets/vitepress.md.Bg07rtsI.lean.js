@@ -1,0 +1,1 @@
+import{_ as s,c as a,o as n,a4 as i}from"./chunks/framework.4aTu-Nia.js";const E=JSON.parse('{"title":"VitePress","description":"","frontmatter":{},"headers":[],"relativePath":"vitepress.md","filePath":"vitepress.md"}'),e={name:"vitepress.md"},p=i("",49),l=[p];function h(t,r,k,d,c,b){return n(),a("div",null,l)}const o=s(e,[["render",h]]);export{E as __pageData,o as default};

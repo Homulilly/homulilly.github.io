@@ -1,0 +1,1 @@
+import{_ as s,c as a,o as i,a4 as n}from"./chunks/framework.4aTu-Nia.js";const b=JSON.parse('{"title":"类与接口","description":"","frontmatter":{},"headers":[],"relativePath":"kotlin/class.md","filePath":"kotlin/class.md"}'),l={name:"kotlin/class.md"},p=n("",10),e=[p];function h(k,t,r,E,d,c){return i(),a("div",null,e)}const y=s(l,[["render",h]]);export{b as __pageData,y as default};
