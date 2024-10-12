@@ -2,12 +2,72 @@
 
 - [使用 Room 持久保留数据](https://developer.android.com/codelabs/basic-android-kotlin-compose-persisting-data-room?hl=zh-cn)
 
+Room 的以下三个组件可以使这些工作流变得顺畅。
+ - Room 实体表示应用数据库中的表。您可以使用它们更新表中的行所存储的数据，以及创建要插入的新行。
+ - Room DAO 提供了供应用在数据库中检索、更新、插入和删除数据的方法。
+ - Room Database 类是一个数据库类，可为您的应用提供与该数据库关联的 DAO 实例。
+
 ### 依赖
+KSP Plugins
 ```kotlin 
 //Room
-implementation("androidx.room:room-runtime:2.5.0")
-ksp("androidx.room:room-compiler:2.5.0")
-implementation("androidx.room:room-ktx:2.5.0")
+implementation("androidx.room:room-runtime:2.6.1")
+ksp("androidx.room:room-compiler:2.6.1")
+implementation("androidx.room:room-ktx:2.6.1")
+```
+
+`build.gradle.kts (Project)` > `plugins` 
+```kotlin
+id("org.jetbrains.kotlin.android") version "2.0.20" apply false
+// kotlin 2.0+ must have it
+id("org.jetbrains.kotlin.plugin.compose") version "2.0.20" apply false
+```
+
+`build.gradle.kts (Module: app)` > `plugins` 
+```kotlin
+id("com.google.devtools.ksp") version "2.0.20-1.0.24"
+id("org.jetbrains.kotlin.plugin.compose") version "2.0.20"
+```
+
+version catalogs
+`libs.versions.toml`
+```
+[versions]
+kotlin="2.0.20"
+ksp="2.0.20-1.0.24"
+room="2.6.1"
+
+[libraries]
+# room 
+androidx-room-compiler = { group = "androidx.room", name = "room-ktx", version.href = "room"}
+androidx-room-ktx = { group = "androidx.room", name = "room-ktx", version.href = "room"}
+androidx-room-runtime = { group = "androidx.room", name = "room-runtime", version.href = "room"}
+
+
+[plugins]
+kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+google-ksp = { id = "com.google.devtools.ksp", version.ref = "ksp"}
+
+[bundles]
+room = ["androidx-room-runtime", "androidx-room-ktx"]
+```
+
+`build.gradle.kts (Project)` > `plugins` 
+```kotlin
+alias(libs.plugins.kotlin.compose) apply false
+alias(libs.plugins.google.ksp) apply false
+```
+
+`build.gradle.kts (Module: app)` > `plugins`
+```kotlin
+alias(libs.plugins.kotlin.compose)
+alias(libs.plugins.google.ksp)
+```
+
+`build.gradle.kts (Module: app)` > `dependencies`
+```kotlin
+implementation(libs.bundles.room)
+ksp(libs.androidx.room.compiler)
 ```
 
 ### 创建 item 实体
@@ -32,6 +92,7 @@ data class Item(
 :::
 
 ### 创建 item DAO
+数据访问对象 (DAO) 是一种模式，其作用是通过提供抽象接口将持久性层与应用的其余部分分离。  
 
 需要实现的操作：  
 - **插入**或**添加**新商品。
@@ -105,5 +166,19 @@ abstract class InventoryDatabase : RoomDatabase() {
         }
 
     }
+}
+```
+
+### @Composable 中调用
+
+```kotlin 
+
+
+val coroutineScope = rememberCoroutineScope()
+
+val coroutineScope = rememberCoroutineScope()
+
+coroutineScope.launch {
+    viewModel.saveItems()
 }
 ```

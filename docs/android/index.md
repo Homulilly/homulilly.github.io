@@ -45,12 +45,10 @@
     - 从互联网获取数据：Kotlin 协程，`Retrofit`，`kotlin.serialization`
     - 加载并显示来自互联网的图片 [添加仓库和手动依赖项注入](https://developer.android.com/codelabs/basic-android-kotlin-compose-add-repository?hl=zh-cn), `Coil`
 - [第 6 单元：数据持久性](https://developer.android.com/courses/android-basics-compose/unit-6?hl=zh-cn)
-    - SQL 简介
+    - SQL 简介: 
+        - [SQL 快速参考](https://www.w3schools.com/sql/sql_quickref.asp)
+        - [SQLite 性能](https://developer.android.com/topic/performance/sqlite-performance-best-practices?hl=zh-cn)
     - 使用 Room 持久保留数据: Kotlin Flow, Room
     - 通过对 DataStore 使用键来存储和访问数据
 - [第 7 单元：WorkManager](https://developer.android.com/courses/android-basics-compose/unit-7?hl=zh-cn)
     - 使用 WorkManager 调度任务
-- [第 8 单元：Compose 中推出了 View](https://developer.android.com/courses/android-basics-compose/unit-8?hl=zh-cn)
-    - Android View 和 View 中的 Compose
-    - Compose 中的 View
-

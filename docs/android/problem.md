@@ -21,8 +21,9 @@ import androidx.compose.foundation.lazy.items
 
 ### mutableStateOf 
 
+Android Studio 无法自动导入的部分
+
 ```kotlin
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.setValue
-import androidx.compose.runtime.mutableStateOf
 ```
