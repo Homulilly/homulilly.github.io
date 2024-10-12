@@ -189,7 +189,7 @@ room="2.6.1"
 
 [libraries]
 # room 
-androidx-room-compiler = { group = "androidx.room", name = "room-ktx", version.ref = "room"}
+androidx-room-compiler = { group = "androidx.room", name = "room-compiler", version.ref = "room"}
 androidx-room-ktx = { group = "androidx.room", name = "room-ktx", version.ref = "room"}
 androidx-room-runtime = { group = "androidx.room", name = "room-runtime", version.ref = "room"}
 
@@ -266,7 +266,7 @@ kotlinx-serialization-json = { group = "org.jetbrains.kotlinx", name = "kotlinx-
 # coil
 coil-compose = { group = "io.coil-kt", name = "coil-compose", version.ref = "coil-compose" }
 # room 
-androidx-room-compiler = { group = "androidx.room", name = "room-ktx", version.ref = "room"}
+androidx-room-compiler = { group = "androidx.room", name = "room-compiler", version.ref = "room"}
 androidx-room-ktx = { group = "androidx.room", name = "room-ktx", version.ref = "room"}
 androidx-room-runtime = { group = "androidx.room", name = "room-runtime", version.ref = "room"}
 
