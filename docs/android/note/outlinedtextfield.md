@@ -1,6 +1,6 @@
 # 自定义 OutlinedTextField 支持点击
 
-`OutlinedTextField` 在设置 `readOnly = true` 时也无法拦截点击事件，可以设置 `OutlinedTextField` 的 `isEnable = false` 或是通过自定义 `interactionSource` 进行处理
+`OutlinedTextField` 在设置 `readOnly = true` 时也无法拦截点击事件，可以设置 `OutlinedTextField` 的 `enabled = false` 或是通过自定义 `interactionSource` 进行处理
 
 ```kotlin
 @Composable
@@ -21,10 +21,8 @@ fun ClickOutlinedTextField(
 
             override suspend fun emit(interaction: Interaction) {
                 when (interaction) {
-                    /*
-                     * 按压时立即触发
-                     * is PressInteraction.Press ->
-                     * /
+                    // 按压时立即触发
+                    // is PressInteraction.Press ->
                     is PressInteraction.Release -> {
                         onClick()
                     }
