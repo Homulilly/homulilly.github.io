@@ -172,8 +172,6 @@ abstract class InventoryDatabase : RoomDatabase() {
 ### @Composable 中调用
 
 ```kotlin 
-
-
 val coroutineScope = rememberCoroutineScope()
 
 val coroutineScope = rememberCoroutineScope()
