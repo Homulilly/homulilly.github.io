@@ -19,6 +19,14 @@ Argument type mismatch: actual type is 'kotlin. collections. List<com. example. 
 import androidx.compose.foundation.lazy.items
 ```
 
+或是使用下面的代码
+```kotlin
+LazyColumn {
+    items(amphibians.size) { index ->
+        AmphibianCard(amphibian = amphibians[index], modifier = Modifier.fillMaxSize())}
+}
+```
+
 ### mutableStateOf 
 
 Android Studio 无法自动导入的部分
