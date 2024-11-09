@@ -33,7 +33,7 @@ export default defineConfig({
       { text: 'Android', link: '/android/' },
       { text: '笔记', link: '/note/' },
       { text: '书签', link: '/bookmark/' },
-      { text: 'aitools.moe', link: 'https://aitools.moe' }
+      { text: 'AI Tools', link: 'https://aitools.moe' }
     ],
 
     search: {
