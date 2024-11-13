@@ -1,4 +1,4 @@
-# VitePress
+# 使用 VitePress 建立一个知识笔记站点
 
 VuePress + VuePress Theme Reco 是很好看，但是已经两次遇到更新升级出错的问题了，之前看到有人推荐 VitePress ，于是切换过来试试。  
 
