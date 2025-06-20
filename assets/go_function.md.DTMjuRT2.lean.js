@@ -1,0 +1,1 @@
+import{_ as s,c as i,o as a,a4 as n}from"./chunks/framework.4aTu-Nia.js";const o=JSON.parse('{"title":"Go 函数","description":"","frontmatter":{},"headers":[],"relativePath":"go/function.md","filePath":"go/function.md"}'),l={name:"go/function.md"},p=n("",11),e=[p];function h(t,k,r,d,E,c){return a(),i("div",null,e)}const y=s(l,[["render",h]]);export{o as __pageData,y as default};
