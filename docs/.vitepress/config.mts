@@ -31,9 +31,7 @@ export default defineConfig({
     nav: [
       { text: 'Home', link: '/' },
       { text: 'Android', link: '/android/' },
-      { text: '笔记', link: '/note/' },
       { text: '书签', link: '/bookmark/' },
-      { text: 'AI Tools', link: 'https://aitools.moe' }
     ],
 
     search: {
