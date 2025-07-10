@@ -7,7 +7,7 @@
 - 页面自动生成 `[TOC]`  
 - 本文不使用主题自带的博客系统  
 
-预览 [NEP NOTE](https://nepnep.me)
+~~预览 [NEP NOTE]~~
 
 ## 安装 VuePress
 

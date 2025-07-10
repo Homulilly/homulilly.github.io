@@ -5,14 +5,14 @@ layout: home
 hero:
   name: "NEP NOTE"
   text: "ლ(╹◡╹ლ)"
-  tagline: Powered By VitePress
+  tagline: 优雅
   actions:
     - theme: brand
       text: VitePress Setup
       link: /vitepress
-    - theme: alt
-      text: VuePress Setup
-      link: /vuepress
+    # - theme: alt
+    #   text: VuePress Setup
+    #   link: /vuepress
   image:
     src: /assets/logo.png
     alt: nepnep~

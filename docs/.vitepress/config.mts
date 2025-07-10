@@ -30,7 +30,6 @@ export default defineConfig({
     logo: '/assets/logo.png',
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Android', link: '/android/' },
       { text: '书签', link: '/bookmark/' },
     ],
 
