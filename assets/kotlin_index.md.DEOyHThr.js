@@ -1,0 +1,1 @@
+import{_ as e,c as t,o as n}from"./chunks/framework.4aTu-Nia.js";const l=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"kotlin/index.md","filePath":"kotlin/index.md"}'),a={name:"kotlin/index.md"};function o(r,i,s,c,d,p){return n(),t("div")}const m=e(a,[["render",o]]);export{l as __pageData,m as default};
