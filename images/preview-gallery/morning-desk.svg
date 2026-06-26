@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Morning desk</title>
+  <desc id="desc">A warm flat illustration of a desk in the morning.</desc>
+  <rect width="1200" height="760" fill="#f7efe2"/>
+  <circle cx="980" cy="150" r="84" fill="#f5c66e"/>
+  <rect x="90" y="135" width="540" height="370" rx="22" fill="#fff9ee" stroke="#2f3542" stroke-width="8"/>
+  <rect x="140" y="190" width="440" height="34" rx="17" fill="#9ac7b6"/>
+  <rect x="140" y="260" width="330" height="26" rx="13" fill="#e7a977"/>
+  <rect x="140" y="315" width="390" height="26" rx="13" fill="#8da5c8"/>
+  <rect x="715" y="280" width="290" height="210" rx="28" fill="#d98b73" stroke="#2f3542" stroke-width="8"/>
+  <rect x="770" y="245" width="180" height="70" rx="35" fill="none" stroke="#2f3542" stroke-width="8"/>
+  <path d="M0 600 C150 560 290 630 435 590 S730 550 900 600 1080 660 1200 620 V760 H0 Z" fill="#b9d7c4"/>
+</svg>

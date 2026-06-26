@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">River walk</title>
+  <desc id="desc">A calm riverside path at sunset.</desc>
+  <rect width="1200" height="760" fill="#f6ecd8"/>
+  <circle cx="930" cy="145" r="72" fill="#e7a977"/>
+  <path d="M0 300 C150 260 260 330 410 290 S700 250 870 300 1080 360 1200 320 V760 H0 Z" fill="#bfd6de"/>
+  <path d="M0 485 C190 420 350 535 540 475 S880 425 1200 505 V760 H0 Z" fill="#8da5c8"/>
+  <path d="M0 595 C180 555 330 625 510 585 S870 540 1200 600 V760 H0 Z" fill="#9ac7b6"/>
+  <path d="M170 500 L340 330 L515 500 Z" fill="#789f8f"/>
+  <path d="M430 500 L610 300 L805 500 Z" fill="#6f8fae"/>
+  <path d="M770 500 L930 340 L1105 500 Z" fill="#b57967"/>
+</svg>

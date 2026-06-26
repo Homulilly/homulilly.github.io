@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Paper notes</title>
+  <desc id="desc">Layered paper notes with simple shapes.</desc>
+  <rect width="1200" height="760" fill="#f3eadb"/>
+  <rect x="185" y="150" width="460" height="420" rx="18" fill="#fffaf0" stroke="#2f3542" stroke-width="8" transform="rotate(-4 415 360)"/>
+  <rect x="515" y="105" width="480" height="455" rx="18" fill="#ffffff" stroke="#2f3542" stroke-width="8" transform="rotate(5 755 332)"/>
+  <rect x="570" y="180" width="350" height="28" rx="14" fill="#8da5c8"/>
+  <rect x="570" y="245" width="280" height="24" rx="12" fill="#9ac7b6"/>
+  <rect x="570" y="305" width="320" height="24" rx="12" fill="#e7a977"/>
+  <circle cx="310" cy="275" r="72" fill="#f5c66e"/>
+  <path d="M250 455 L390 335 L505 455 Z" fill="#9ac7b6"/>
+  <path d="M335 470 L475 320 L575 470 Z" fill="#d98b73"/>
+</svg>

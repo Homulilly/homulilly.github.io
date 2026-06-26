@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Reading corner</title>
+  <desc id="desc">A quiet reading corner with books and a chair.</desc>
+  <rect width="1200" height="760" fill="#eef0e8"/>
+  <rect x="120" y="550" width="960" height="80" rx="18" fill="#d4a373" stroke="#30363f" stroke-width="8"/>
+  <rect x="210" y="220" width="150" height="330" rx="18" fill="#8da5c8" stroke="#30363f" stroke-width="8"/>
+  <rect x="390" y="185" width="130" height="365" rx="18" fill="#9ac7b6" stroke="#30363f" stroke-width="8"/>
+  <rect x="545" y="260" width="120" height="290" rx="18" fill="#f0c36d" stroke="#30363f" stroke-width="8"/>
+  <path d="M760 345 C760 250 900 250 900 345 V548 H760 Z" fill="#d98b73" stroke="#30363f" stroke-width="8"/>
+  <rect x="720" y="515" width="225" height="46" rx="23" fill="#fff9ee" stroke="#30363f" stroke-width="8"/>
+  <circle cx="985" cy="195" r="56" fill="#f0c36d"/>
+</svg>
