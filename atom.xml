@@ -107,8 +107,8 @@
       <name>Author</name>
     </author>
     <category term="主题开发" scheme="https://flatpaper.nep.me/categories/%E4%B8%BB%E9%A2%98%E5%BC%80%E5%8F%91/"/>
-    <category term="主题" scheme="https://flatpaper.nep.me/tags/%E4%B8%BB%E9%A2%98/"/>
     <category term="Markdown" scheme="https://flatpaper.nep.me/tags/Markdown/"/>
+    <category term="主题" scheme="https://flatpaper.nep.me/tags/%E4%B8%BB%E9%A2%98/"/>
     <category term="排版" scheme="https://flatpaper.nep.me/tags/%E6%8E%92%E7%89%88/"/>
     <category term="代码块" scheme="https://flatpaper.nep.me/tags/%E4%BB%A3%E7%A0%81%E5%9D%97/"/>
     <category term="测试" scheme="https://flatpaper.nep.me/tags/%E6%B5%8B%E8%AF%95/"/>
@@ -319,8 +319,8 @@
       <name>Author</name>
     </author>
     <category term="主题开发" scheme="https://flatpaper.nep.me/categories/%E4%B8%BB%E9%A2%98%E5%BC%80%E5%8F%91/"/>
-    <category term="主题" scheme="https://flatpaper.nep.me/tags/%E4%B8%BB%E9%A2%98/"/>
     <category term="Hexo" scheme="https://flatpaper.nep.me/tags/Hexo/"/>
+    <category term="主题" scheme="https://flatpaper.nep.me/tags/%E4%B8%BB%E9%A2%98/"/>
     <category term="测试" scheme="https://flatpaper.nep.me/tags/%E6%B5%8B%E8%AF%95/"/>
     <content>
       <![CDATA[<p>这篇文章用于快速检查首页卡片、文章详情、归档、分类和标签页的基础展示效果。它刻意包含较短段落、清单和多个二级标题，方便观察排版节奏。</p><span id="more"></span><h2 id="首页卡片"><a href="#首页卡片" class="headerlink" title="首页卡片"></a>首页卡片</h2><p>首页最容易暴露间距问题。卡片标题需要在一行、两行和三行之间保持稳定，摘要截断后也不应该挤压元信息区域。</p><p>测试重点：</p><ul><li>标题字号是否清晰。</li><li>摘要是否在不同长度下自然截断。</li><li>日期、分类和评论数字是否对齐。</li><li>缩略图与正文区域是否有稳定比例。</li></ul><h2 id="文章详情"><a href="#文章详情" class="headerlink" title="文章详情"></a>文章详情</h2><p>详情页需要关注正文可读性。行高、段落间距、标题层级和代码块宽度会直接影响阅读体验。</p><blockquote><p>一个主题的精致感，通常来自大量不显眼的小距离。</p></blockquote><h2 id="分类与标签"><a href="#分类与标签" class="headerlink" title="分类与标签"></a>分类与标签</h2><p>这篇文章归入“主题开发”，并带有多个标签。它适合用来检查分类页、标签页、归档页之间的跳转是否正确。</p><h2 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h2><p>如果这篇文章在首页、文章页和归档页都表现稳定，主题的主要内容流已经具备基本可用性。</p>]]>
