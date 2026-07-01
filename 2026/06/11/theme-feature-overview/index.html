@@ -18,7 +18,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://img.nep.me/p/flatpaper/cover-flatpaper-demo.webp">
 <meta property="article:published_time" content="2026-06-11T09:30:00.000Z">
-<meta property="article:modified_time" content="2026-06-25T19:26:49.403Z">
+<meta property="article:modified_time" content="2026-07-01T20:50:14.291Z">
 <meta property="article:author" content="Author">
 <meta property="article:tag" content="Markdown">
 <meta property="article:tag" content="主题">
@@ -31,7 +31,7 @@
 
 <link rel="icon" href="/images/favicon.png" type="image/png">
 
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"主题效果总览：文章块与交互组件预览","name":"主题效果总览：文章块与交互组件预览 | Flatpaper Demo","description":"这篇文章用于集中预览主题在文章页里的主要内容块：标题、段落、链接、引用、提示块、选项卡、表格、代码、图片、脚注、列表和长文本换行。它适合作为主题改样式后的快速回归检查页面。","url":"https://flatpaper.nep.me/2026/06/11/theme-feature-overview/","inLanguage":"zh-CN","isPartOf":{"@type":"WebSite","name":"Flatpaper Demo","url":"https://flatpaper.nep.me/"},"image":["https://img.nep.me/p/flatpaper/cover-flatpaper-demo.webp"],"mainEntityOfPage":"https://flatpaper.nep.me/2026/06/11/theme-feature-overview/","datePublished":"2026-06-11T09:30:00.000Z","dateModified":"2026-06-25T19:26:49.403Z","author":{"@type":"Person","name":"Author"},"publisher":{"@type":"Organization","name":"Flatpaper Demo"},"keywords":"主题, Markdown, 排版, 代码块, 测试"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"主题效果总览：文章块与交互组件预览","name":"主题效果总览：文章块与交互组件预览 | Flatpaper Demo","description":"这篇文章用于集中预览主题在文章页里的主要内容块：标题、段落、链接、引用、提示块、选项卡、表格、代码、图片、脚注、列表和长文本换行。它适合作为主题改样式后的快速回归检查页面。","url":"https://flatpaper.nep.me/2026/06/11/theme-feature-overview/","inLanguage":"zh-CN","isPartOf":{"@type":"WebSite","name":"Flatpaper Demo","url":"https://flatpaper.nep.me/"},"image":["https://img.nep.me/p/flatpaper/cover-flatpaper-demo.webp"],"mainEntityOfPage":"https://flatpaper.nep.me/2026/06/11/theme-feature-overview/","datePublished":"2026-06-11T09:30:00.000Z","dateModified":"2026-07-01T20:50:14.291Z","author":{"@type":"Person","name":"Author"},"publisher":{"@type":"Organization","name":"Flatpaper Demo"},"keywords":"主题, Markdown, 排版, 代码块, 测试"}</script>
 
 <script>
   (function () {
@@ -747,30 +747,50 @@
 <h2 id="6-表格"><a href="#6-表格" class="headerlink" title="6. 表格"></a>6. 表格</h2><table>
 <thead>
 <tr>
-<th>场景</th>
-<th>检查点</th>
-<th>期望</th>
+<th align="left">场景（左对齐）</th>
+<th align="center">检查点(居中)</th>
+<th align="right">期望(右对齐)</th>
 </tr>
 </thead>
 <tbody><tr>
-<td>普通表格</td>
-<td>边框、行高、单元格间距</td>
-<td>易扫描</td>
+<td align="left">普通表格</td>
+<td align="center">边框、行高、单元格间距</td>
+<td align="right">易扫描</td>
 </tr>
 <tr>
-<td>长文本</td>
-<td>单元格自动换行</td>
-<td>不撑破文章区域</td>
+<td align="left">长文本</td>
+<td align="center">单元格自动换行</td>
+<td align="right">不撑破文章区域</td>
 </tr>
 <tr>
-<td>行内代码</td>
-<td><code>code_theme</code>、<code>note_style</code></td>
-<td>颜色清晰</td>
+<td align="left">行内代码</td>
+<td align="center"><code>code_theme</code>、<code>note_style</code></td>
+<td align="right">颜色清晰</td>
 </tr>
 <tr>
-<td>链接</td>
-<td><a href="/about/">配置页</a></td>
-<td>可识别</td>
+<td align="left">链接</td>
+<td align="center"><a href="/about/">配置页</a></td>
+<td align="right">可识别</td>
+</tr>
+</tbody></table>
+<p>下面这张表用于检查窄屏最低列宽：较短的列不应因为旁边有超长内容而挤到两三个字母一行，超长内容可以在自身列内换行。</p>
+<table>
+<thead>
+<tr>
+<th align="left">名称</th>
+<th align="center">状态</th>
+<th align="right">超长标识</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">EnglishWord</td>
+<td align="center">Ready</td>
+<td align="right">flatpaper-demo-theme-table-overflow-check-super-long-unbroken-token-20260702</td>
+</tr>
+<tr>
+<td align="left">中文短词</td>
+<td align="center">OK</td>
+<td align="right"><a target="_blank" rel="noopener" href="https://example.com/flatpaper/table/overflow/regression/check/with/a/very/long/path">https://example.com/flatpaper/table/overflow/regression/check/with/a/very/long/path</a></td>
 </tr>
 </tbody></table>
 <h2 id="7-代码块"><a href="#7-代码块" class="headerlink" title="7. 代码块"></a>7. 代码块</h2><p>JavaScript:</p>
