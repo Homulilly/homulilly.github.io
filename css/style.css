@@ -2130,7 +2130,9 @@ body .home-hero .home-hero__profile .home-hero__links a:focus-visible {
 .home-hero__arrow-text {
   display: block;
   width: 100%;
+  padding-block: 0.08em;
   overflow: hidden;
+  line-height: 1.24;
   text-align: center;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -2382,13 +2384,13 @@ body .home-hero .home-hero__profile .home-hero__links a:focus-visible {
   .home-hero {
     padding: 24px 16px;
   }
-  .home-hero--image {
+  .home-hero--image:not(.home-hero--mobile-image) {
     color: var(--ink);
     background: var(--hero-paper);
     background-size: auto;
     background-position: center;
   }
-  .home-hero--image::before {
+  .home-hero--image:not(.home-hero--mobile-image)::before {
     opacity: 0.42;
   }
   .home-hero__tools {
@@ -2399,7 +2401,7 @@ body .home-hero .home-hero__profile .home-hero__links a:focus-visible {
   .home-hero__profile {
     padding: 38px 22px 28px;
   }
-  .home-hero--image .home-hero__profile::before {
+  .home-hero--image:not(.home-hero--mobile-image) .home-hero__profile::before {
     background: rgba(255,253,246,0.86);
     border-color: rgba(221,208,181,0.9);
     box-shadow: 0 24px 70px rgba(82,64,38,0.2);
@@ -2410,7 +2412,7 @@ body .home-hero .home-hero__profile .home-hero__links a:focus-visible {
     width: 92px;
     height: 92px;
   }
-  .home-hero--image .home-hero__eyebrow {
+  .home-hero--image:not(.home-hero--mobile-image) .home-hero__eyebrow {
     color: var(--color-accent-strong);
   }
   .home-hero h1 {
@@ -2419,17 +2421,26 @@ body .home-hero .home-hero__profile .home-hero__links a:focus-visible {
   .home-hero__bio {
     font-size: 14px;
   }
-  .home-hero--image .home-hero__bio {
+  .home-hero--image:not(.home-hero--mobile-image) .home-hero__bio {
     color: var(--ink-soft);
   }
-  .home-hero--image .home-hero__tools .home-hero__tool {
+  .home-hero--image:not(.home-hero--mobile-image) .home-hero__nav-link {
+    color: var(--muted);
+    text-decoration-color: var(--dash);
+  }
+  .home-hero--image:not(.home-hero--mobile-image) .home-hero__nav-link:hover,
+  .home-hero--image:not(.home-hero--mobile-image) .home-hero__nav-link:focus-visible {
+    color: var(--color-accent-strong);
+    text-decoration-color: var(--color-accent);
+  }
+  .home-hero--image:not(.home-hero--mobile-image) .home-hero__tools .home-hero__tool {
     color: var(--ink-soft);
     background: rgba(255,253,246,0.72);
     border-color: rgba(177,157,117,0.72);
     box-shadow: 0 8px 18px rgba(82,64,38,0.12);
   }
-  .home-hero--image .home-hero__tools .home-hero__tool:hover,
-  .home-hero--image .home-hero__tools .home-hero__tool:focus-visible {
+  .home-hero--image:not(.home-hero--mobile-image) .home-hero__tools .home-hero__tool:hover,
+  .home-hero--image:not(.home-hero--mobile-image) .home-hero__tools .home-hero__tool:focus-visible {
     color: var(--color-accent-strong);
     background: var(--color-accent-soft);
     border-color: var(--color-accent);
@@ -2460,21 +2471,30 @@ body .home-hero .home-hero__profile .home-hero__links a:focus-visible {
   .hero-sticker--custom-4 {
     top: 9%;
   }
-  .dark-mode .home-hero--image .home-hero__profile::before {
+  .dark-mode .home-hero--image:not(.home-hero--mobile-image) .home-hero__profile::before {
     background: rgba(35,39,50,0.9);
     border-color: var(--dash);
   }
-  .dark-mode .home-hero--image .home-hero__tools .home-hero__tool {
+  .dark-mode .home-hero--image:not(.home-hero--mobile-image) .home-hero__tools .home-hero__tool {
     color: var(--ink-soft);
     background: rgba(35,39,50,0.78);
     border-color: var(--dash);
     box-shadow: 0 10px 22px rgba(0,0,0,0.28);
   }
-  .dark-mode .home-hero--image .home-hero__tools .home-hero__tool:hover,
-  .dark-mode .home-hero--image .home-hero__tools .home-hero__tool:focus-visible {
+  .dark-mode .home-hero--image:not(.home-hero--mobile-image) .home-hero__tools .home-hero__tool:hover,
+  .dark-mode .home-hero--image:not(.home-hero--mobile-image) .home-hero__tools .home-hero__tool:focus-visible {
     color: var(--color-accent-muted);
     background: var(--color-accent-soft);
     border-color: var(--color-accent);
+  }
+  .dark-mode .home-hero--image:not(.home-hero--mobile-image) .home-hero__nav-link {
+    color: var(--muted);
+    text-decoration-color: rgba(255,255,255,0.12);
+  }
+  .dark-mode .home-hero--image:not(.home-hero--mobile-image) .home-hero__nav-link:hover,
+  .dark-mode .home-hero--image:not(.home-hero--mobile-image) .home-hero__nav-link:focus-visible {
+    color: var(--color-accent-muted);
+    text-decoration-color: var(--color-accent);
   }
 }
 @media (prefers-reduced-motion: reduce) {
