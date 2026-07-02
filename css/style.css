@@ -1921,13 +1921,16 @@ body.has-home-hero.is-hero-active::before {
   text-decoration: underline;
   text-decoration-style: wavy;
   text-decoration-color: var(--dash);
+  text-decoration-thickness: 1.5px;
   text-underline-offset: 4px;
-  transition: color 0.2s ease, text-decoration-color 0.2s ease;
+  text-decoration-skip-ink: none;
+  transition: color 0.2s ease, text-decoration-color 0.2s ease, text-decoration-thickness 0.2s ease;
 }
 .home-hero__nav-link:hover,
 .home-hero__nav-link:focus-visible {
   color: var(--color-accent-strong);
   text-decoration-color: var(--color-accent);
+  animation: flatpaper-link-wave 0.32s ease-out 1;
   outline: none;
 }
 .home-hero--image .home-hero__nav-link {
@@ -2522,6 +2525,10 @@ body.has-home-hero.is-hero-active::before {
   }
 }
 @media (prefers-reduced-motion: reduce) {
+  .home-hero__nav-link:hover,
+  .home-hero__nav-link:focus-visible {
+    animation: none;
+  }
   .home-hero__links a {
     transition: none;
   }
