@@ -42,6 +42,17 @@
         document.documentElement.classList.add('dark-mode');
       }
     } catch (e) {}
+    // Reveal-on-scroll opts in from here so it is applied before first paint
+    // (no flash) and never applies without JS. If main.js never runs the
+    // observer, the timeout drops the class again so nothing stays hidden.
+    if ('IntersectionObserver' in window) {
+      document.documentElement.classList.add('reveal-ready');
+      setTimeout(function () {
+        if (!window.flatpaperRevealReady) {
+          document.documentElement.classList.remove('reveal-ready');
+        }
+      }, 2000);
+    }
   })();
 </script>
 
@@ -390,21 +401,21 @@
     </nav>
   </section>
 
-  <section class="side-card profile-card">
+  <section class="side-card profile-card reveal">
     
       <div class="avatar avatar--image">
         <img src="/images/icon.png" alt="Author" loading="lazy" referrerpolicy="no-referrer">
       </div>
     
     <h3>Author</h3>
-    <p class="profile-role">主题开发者</p>
+    <p class="profile-role">Hexo Theme</p>
     <p>Flatpaper 是一款为 Hexo 设计的轻量级博客主题，以简洁美观为核心，呈现清新自然的手帐风格。</p>
     
       <div class="site-info" aria-label="站点信息">
         
           
             <a class="site-info__item" href="/archives/">
-              <strong>21</strong>
+              <strong>22</strong>
               <span>文章</span>
             </a>
           
@@ -546,21 +557,21 @@
   
 
   
-    <section class="side-card categories-card">
+    <section class="side-card categories-card reveal">
       <h2>
 <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-folder flatpaper-icon flatpaper-icon--lucide" aria-hidden="true"><use href="/icons.svg#flatpaper-icon-lucide-folder"></use></svg>
 分类</h2>
       
-        <a href="/categories/%E5%86%99%E4%BD%9C%E7%A4%BA%E4%BE%8B/">
+        <a href="/categories/%E4%B8%BB%E9%A2%98%E5%BC%80%E5%8F%91/">
           <span class="dot dot-0"></span>
-          <strong>写作示例</strong>
-          <em>9</em>
+          <strong>主题开发</strong>
+          <em>11</em>
         </a>
       
-        <a href="/categories/%E4%B8%BB%E9%A2%98%E5%BC%80%E5%8F%91/">
+        <a href="/categories/%E5%86%99%E4%BD%9C%E7%A4%BA%E4%BE%8B/">
           <span class="dot dot-1"></span>
-          <strong>主题开发</strong>
-          <em>10</em>
+          <strong>写作示例</strong>
+          <em>9</em>
         </a>
       
         <a href="/categories/%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/">
@@ -577,7 +588,7 @@
       
     </section>
 
-    <section class="side-card tag-card">
+    <section class="side-card tag-card reveal">
       <header class="tag-card__head">
         <h2>
 <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-flame flatpaper-icon flatpaper-icon--lucide" aria-hidden="true"><use href="/icons.svg#flatpaper-icon-lucide-flame"></use></svg>
@@ -594,27 +605,27 @@
         
           <a class="tag-chip tag-chip-0" href="/tags/%E4%B8%BB%E9%A2%98/">主题</a>
         
-          <a class="tag-chip tag-chip-1" href="/tags/Hexo/">Hexo</a>
+          <a class="tag-chip tag-chip-1" href="/tags/FlatPaper/">FlatPaper</a>
         
-          <a class="tag-chip tag-chip-2" href="/tags/FlatPaper/">FlatPaper</a>
+          <a class="tag-chip tag-chip-2" href="/tags/Hexo/">Hexo</a>
         
-          <a class="tag-chip tag-chip-3" href="/tags/Markdown/">Markdown</a>
+          <a class="tag-chip tag-chip-3" href="/tags/%E5%9B%BE%E7%89%87/">图片</a>
         
-          <a class="tag-chip tag-chip-4" href="/tags/%E5%9B%BE%E7%89%87/">图片</a>
+          <a class="tag-chip tag-chip-4" href="/tags/Markdown/">Markdown</a>
         
-          <a class="tag-chip tag-chip-5" href="/tags/%E4%BB%A3%E7%A0%81%E5%9D%97/">代码块</a>
+          <a class="tag-chip tag-chip-5" href="/tags/%E8%A7%86%E8%A7%89%E8%AE%BE%E8%AE%A1/">视觉设计</a>
         
           <a class="tag-chip tag-chip-0" href="/tags/%E6%8E%92%E7%89%88/">排版</a>
         
-          <a class="tag-chip tag-chip-1" href="/tags/%E8%A7%86%E8%A7%89%E8%AE%BE%E8%AE%A1/">视觉设计</a>
+          <a class="tag-chip tag-chip-1" href="/tags/%E4%BB%A3%E7%A0%81%E5%9D%97/">代码块</a>
         
           <a class="tag-chip tag-chip-2" href="/tags/%E9%85%8D%E7%BD%AE/">配置</a>
         
           <a class="tag-chip tag-chip-3" href="/tags/%E6%B5%8B%E8%AF%95/">测试</a>
         
-          <a class="tag-chip tag-chip-4" href="/tags/EJS/">EJS</a>
+          <a class="tag-chip tag-chip-4" href="/tags/%E9%98%85%E8%AF%BB%E4%BD%93%E9%AA%8C/">阅读体验</a>
         
-          <a class="tag-chip tag-chip-5" href="/tags/%E5%BD%92%E6%A1%A3/">归档</a>
+          <a class="tag-chip tag-chip-5" href="/tags/%E5%A4%96%E9%93%BE/">外链</a>
         
       </div>
     </section>
@@ -683,13 +694,128 @@ window.addEventListener('load', function () {
 
   
 <footer class="site-footer">
-  <span class="site-footer__left">© 2026 By Author</span>
+  <span class="site-footer__left">© 2026 By Author
+
+<span class="site-footer__typed" id="footer-type-tips"></span>
+<script>
+(function () {
+  var el = document.getElementById("footer-type-tips");
+  if (!el) return;
+  var sub = ["A Simple Hexo Theme"];
+  var source = 0;
+  var effect = true;
+  var loop = true;
+  var startDelay = 300;
+  var typeSpeed = 150;
+  var backSpeed = 50;
+  var cdn = "https://cdn.jsdelivr.net/npm/typed.js@2.1.0/dist/typed.umd.js";
+  var fromLabel = "出自";
+
+  // One shared loader per page: footer and hero can both enable the
+  // typewriter, and they must not each request Typed.js.
+  var loader = window.flatpaperLoadTyped;
+  if (!loader) {
+    loader = window.flatpaperLoadTyped = function (src, done) {
+      var state = loader._state || (loader._state = { status: 0, waiting: [] });
+      if (typeof Typed !== 'undefined') { done(true); return; }
+      if (state.status === 2) { done(false); return; }
+      state.waiting.push(done);
+      if (state.status === 1) return;
+      state.status = 1;
+      var settled = false;
+      function settle(ok) {
+        if (settled) return;
+        settled = true;
+        state.status = ok ? 0 : 2;
+        var queue = state.waiting;
+        state.waiting = [];
+        for (var i = 0; i < queue.length; i++) queue[i](ok && typeof Typed !== 'undefined');
+      }
+      var s = document.createElement('script');
+      s.src = src;
+      s.async = true;
+      s.onload = function () { settle(true); };
+      // A failed CDN must not leave the caller waiting: onerror settles as a
+      // failure, and the timeout covers a request that never resolves at all.
+      s.onerror = function () { settle(false); };
+      setTimeout(function () { settle(false); }, 6000);
+      (document.body || document.documentElement).appendChild(s);
+    };
+  }
+
+  // Without Typed.js (disabled, blocked CDN or timeout) the first string is
+  // still shown as plain text, so the slot is never left empty.
+  function render(strings) {
+    var list = [];
+    for (var i = 0; i < strings.length; i++) {
+      if (strings[i] != null && String(strings[i]) !== '') list.push(String(strings[i]));
+    }
+    if (!list.length) return;
+    if (!effect) { el.textContent = list[0]; return; }
+    loader(cdn, function (ready) {
+      if (!ready) { el.textContent = list[0]; return; }
+      new Typed(el, {
+        strings: list,
+        startDelay: startDelay,
+        typeSpeed: typeSpeed,
+        backSpeed: backSpeed,
+        loop: loop
+      });
+    });
+  }
+
+  function withQuote(quote, from) {
+    var strings = sub.slice();
+    if (quote) {
+      if (from) strings.unshift(fromLabel + ' ' + from);
+      strings.unshift(quote);
+    }
+    render(strings);
+  }
+
+  // Quote providers are plain <script> endpoints; a failure here only means
+  // falling back to the configured `sub` list.
+  function loadOnce(src, done) {
+    var settled = false;
+    function settle(ok) { if (!settled) { settled = true; done(ok); } }
+    var s = document.createElement('script');
+    s.src = src;
+    s.async = true;
+    s.onload = function () { settle(true); };
+    s.onerror = function () { settle(false); };
+    setTimeout(function () { settle(false); }, 6000);
+    (document.body || document.documentElement).appendChild(s);
+  }
+
+  if (source === 1) {
+    fetch('https://v1.hitokoto.cn')
+      .then(function (r) { return r.json(); })
+      .then(function (data) { withQuote(data && data.hitokoto, data && data.from); })
+      .catch(function () { render(sub); });
+  } else if (source === 2) {
+    loadOnce('https://yijuzhan.com/api/word.php?m=js', function (ok) {
+      if (ok && typeof str !== 'undefined' && str && str[0]) withQuote(str[0], str[1]);
+      else render(sub);
+    });
+  } else if (source === 3) {
+    loadOnce('https://sdk.jinrishici.com/v2/browser/jinrishici.js', function (ok) {
+      if (!ok || typeof jinrishici === 'undefined' || !jinrishici.load) { render(sub); return; }
+      jinrishici.load(function (result) {
+        withQuote(result && result.data && result.data.content, '');
+      });
+    });
+  } else {
+    render(sub);
+  }
+
+})();
+</script>
+
+</span>
   
     <span class="site-footer__right">
       
-        <span class="site-footer__row"><span class="site-footer__powered-prefix">Powered by Theme</span> <a href="https://github.com/Homulilly/hexo-theme-flatpaper" target="_blank" rel="noopener">FlatPaper</a></span>
-      
-        <span class="site-footer__row"><a href="/archives">归档</a><span class="site-footer__separator"> · </span><a href="/categories">分类</a><span class="site-footer__separator"> · </span><a href="/tags">标签</a></span>
+        <span class="site-footer__row"><a href="/archives">归档</a><span class="site-footer__separator"> · </span><a href="/categories">分类</a><span class="site-footer__separator"> · </span><a href="/tags">标签</a><span class="site-footer__separator"> · </span><a href="/copyright" class="site-footer__icon-link" title="版权协议" aria-label="版权协议"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 512 512" fill="currentColor" class="lucide lucide-copyright flatpaper-icon flatpaper-icon--fa-regular" aria-hidden="true"><use href="/icons.svg#flatpaper-icon-fa-regular-copyright"></use></svg><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 496 512" fill="currentColor" class="lucide lucide-creative-commons-by flatpaper-icon flatpaper-icon--fa-brands" aria-hidden="true"><use href="/icons.svg#flatpaper-icon-fa-brands-creative-commons-by"></use></svg><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 496 512" fill="currentColor" class="lucide lucide-creative-commons-nc flatpaper-icon flatpaper-icon--fa-brands" aria-hidden="true"><use href="/icons.svg#flatpaper-icon-fa-brands-creative-commons-nc"></use></svg><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 496 512" fill="currentColor" class="lucide lucide-creative-commons-nd flatpaper-icon flatpaper-icon--fa-brands" aria-hidden="true"><use href="/icons.svg#flatpaper-icon-fa-brands-creative-commons-nd"></use></svg></a><span class="site-footer__separator"> · </span><span class="site-footer__powered"><span class="site-footer__powered-prefix">Powered by Theme</span> <a href="https://github.com/Homulilly/hexo-theme-flatpaper" target="_blank" rel="noopener">FlatPaper</a></span></span>
       
         <span class="site-footer__row"><a href="https://hexotag.nep.me/" target="_blank" rel="noopener">Flatpaper Tools</a></span>
       
@@ -723,7 +849,7 @@ window.addEventListener('load', function () {
 </div>
 
   <script>
-  window.FLATPAPER_I18N = {"language":"zh-CN","common.posts":"文章","common.categories":"分类","common.tags":"标签","common.comments":"评论","common.share":"分享","common.page":"页面","common.archive":"归档","common.post_list":"文章列表","common.search_posts":"搜索文章","common.random_posts":"随机文章","common.reward":"赞赏","common.view_all":"查看全部","pagination.prev":"上一页","pagination.next":"下一页","pagination.post_pager":"文章分页","pagination.archive_pager":"归档分页","index.featured":"精选文章","index.pinned":"置顶","index.read_more":"阅读全文","index.previous_slide":"上一张","index.next_slide":"下一张","index.carousel_pagination":"轮播页码","index.carousel_slide":"第 %d 张","index.latest_posts":"最新文章","index.empty_posts":"还没有文章。创建第一篇文章后，这里会显示最新内容。","archive.title":"归档","archive.post_list":"文章列表","taxonomy.category_count":"%d 篇","taxonomy.empty_categories":"暂时还没有分类。","taxonomy.empty_tags":"暂时还没有标签。","links.label":"友链","links.title":"友情链接","links.empty_data":"暂未加载到友链数据。请确认 source/_data/links.yml 存在并已 hexo clean。","links.rss_label":"%s 的 RSS","friends_feed.label":"朋友圈","friends_feed.title":"友链朋友圈","friends_feed.loading":"正在加载友链动态…","friends_feed.missing_url":"暂未配置 all.json 地址。","friends_feed.load_failed":"友链动态加载失败，请稍后再试。","friends_feed.empty":"暂时没有抓取到友链文章。","friends_feed.load_more":"加载更多","friends_feed.updated_at":"更新于 %s","friends_feed.friend_count":"%d 位友邻","friends_feed.active_count":"%d 位活跃","friends_feed.article_count":"%d 篇文章","friends_feed.unknown_author":"未知站点","friends_feed.date_unknown":"时间未知","guestbook.label":"留言板","guestbook.title":"留言板","guestbook.loading":"正在铺开留言墙…","guestbook.missing_config":"留言墙需要评论系统：请在主题配置中设置 comments: twikoo（并填写 envId）或 comments: artalk（并填写 server）。","guestbook.load_failed":"留言加载失败，请稍后再试。","guestbook.empty":"墙上还空着，来贴第一张留言吧！","guestbook.load_more":"展开更多留言","guestbook.total_count":"共 %d 条留言","guestbook.latest_note":"墙上展示最新 %d 条","guestbook.jump_to_comment":"查看留言","guestbook.sort_time":"查看最新","guestbook.sort_random":"随机排序","guestbook.anonymous":"匿名访客","guestbook.write_hint":"在下方留言，刷新后就会贴到墙上","post.scroll_to_comments":"跳转到评论区","post.previous":"上一篇","post.next":"下一篇","post.no_previous":"没有更早的文章了","post.no_next":"已经是最新的一篇","post.back_to_top":"返回顶部","post.related_posts":"相关文章","post.view_more":"查看更多","not_found.label":"页面走丢了","not_found.title":"找不到这个页面","not_found.text":"这个地址可能已经移动、删除，或者从未存在。","not_found.home":"返回首页","not_found.search":"搜索文章","search.placeholder":"输入关键词，按 Esc 关闭","search.empty":"输入关键词后显示匹配的文章","search.loading":"正在加载搜索索引…","search.load_failed":"搜索索引加载失败，请重新打开搜索重试","search.no_result":"没有找到与 \"%s\" 相关的文章","search.close":"关闭搜索","code.copy":"复制代码","code.collapse":"折叠代码","code.expand":"展开代码","heading.anchor":"链接到此节: %s","head.tag":"标签：%s","head.category":"分类：%s","head.archive":"归档","head.archive_with_date":"归档：%s","head.page_number":"第 %d 页","navigation.primary":"主导航","navigation.mobile":"移动端导航","navigation.brand_home":"FlatPaper 首页","navigation.brand_menu":"打开站点导航","navigation.open_sidebar":"打开侧边栏","navigation.close_sidebar":"关闭侧边栏","navigation.sidebar":"侧边栏","navigation.sidebar_tools":"侧边栏工具","navigation.site_links":"站点链接","navigation.site_info":"站点信息","colors.choose_theme_color":"选择主题色","colors.theme_color":"主题色","colors.toggle_color_mode":"切换颜色模式","colors.green":"绿色","colors.purple":"紫色","colors.pink":"粉色","colors.sakura":"樱花粉","colors.blue":"蓝色","colors.orange":"橙色","colors.black":"黑色","profile.default_bio":"热爱生活，热爱代码，喜欢分享技术与生活中的点滴。","welcome.cta":"开始阅读","welcome.title":"欢迎来到 FlatPaper","welcome.text":"一个专注于内容与阅读体验的博客主题。","home_hero.label":"首页开屏","home_hero.enter":"开始阅读","home_hero.note":"今日","home_hero.default_subtitle":"日常记录","home_hero.nav_links":"开屏导航","home_hero.profile_links":"个人链接","home_hero.tools":"开屏工具","home_hero.shuffle_stickers":"打乱贴纸位置","home_hero.link":"链接","home_hero.sticker_image":"贴纸图片","home_hero.visit_confirm":"要访问 %s 吗？","home_hero.visit":"访问","home_hero.cancel":"取消","toc.title":"文章目录","toc.empty":"目录会根据文章标题自动生成。","toc.expand_all":"展开全部目录","toc.collapse_all":"收起全部目录","sidebar.hot_tags":"热门标签","sidebar.latest_posts":"最新文章"};
+  window.FLATPAPER_I18N = {"language":"zh-CN","common.posts":"文章","common.categories":"分类","common.tags":"标签","common.comments":"评论","common.share":"分享","common.page":"页面","common.archive":"归档","common.post_list":"文章列表","common.search_posts":"搜索文章","common.random_posts":"随机文章","common.reward":"赞赏","common.view_all":"查看全部","pagination.prev":"上一页","pagination.next":"下一页","pagination.post_pager":"文章分页","pagination.archive_pager":"归档分页","index.featured":"精选文章","index.pinned":"置顶","index.read_more":"阅读全文","index.previous_slide":"上一张","index.next_slide":"下一张","index.carousel_pagination":"轮播页码","index.carousel_slide":"第 %d 张","index.latest_posts":"最新文章","index.empty_posts":"还没有文章。创建第一篇文章后，这里会显示最新内容。","archive.title":"归档","archive.post_list":"文章列表","taxonomy.category_count":"%d 篇","taxonomy.empty_categories":"暂时还没有分类。","taxonomy.empty_tags":"暂时还没有标签。","links.label":"友链","links.title":"友情链接","links.empty_data":"暂未加载到友链数据。请确认 source/_data/links.yml 存在并已 hexo clean。","links.rss_label":"%s 的 RSS","friends_feed.label":"朋友圈","friends_feed.title":"友链朋友圈","friends_feed.loading":"正在加载友链动态…","friends_feed.missing_url":"暂未配置 all.json 地址。","friends_feed.load_failed":"友链动态加载失败，请稍后再试。","friends_feed.empty":"暂时没有抓取到友链文章。","friends_feed.load_more":"加载更多","friends_feed.updated_at":"更新于 %s","friends_feed.friend_count":"%d 位友邻","friends_feed.active_count":"%d 位活跃","friends_feed.article_count":"%d 篇文章","friends_feed.unknown_author":"未知站点","friends_feed.date_unknown":"时间未知","guestbook.label":"留言板","guestbook.title":"留言板","guestbook.loading":"正在铺开留言墙…","guestbook.missing_config":"留言墙需要评论系统：请在主题配置中设置 comments: twikoo（并填写 envId）或 comments: artalk（并填写 server）。","guestbook.load_failed":"留言加载失败，请稍后再试。","guestbook.empty":"墙上还空着，来贴第一张留言吧！","guestbook.load_more":"展开更多留言","guestbook.total_count":"共 %d 条留言","guestbook.latest_note":"墙上展示最新 %d 条","guestbook.jump_to_comment":"查看留言","guestbook.sort_time":"查看最新","guestbook.sort_random":"随机排序","guestbook.anonymous":"匿名访客","guestbook.write_hint":"在下方留言，刷新后就会贴到墙上","post.scroll_to_comments":"跳转到评论区","post.previous":"上一篇","post.next":"下一篇","post.no_previous":"没有更早的文章了","post.no_next":"已经是最新的一篇","post.back_to_top":"返回顶部","post.related_posts":"相关文章","post.view_more":"查看更多","not_found.label":"页面走丢了","not_found.title":"找不到这个页面","not_found.text":"这个地址可能已经移动、删除，或者从未存在。","not_found.home":"返回首页","not_found.search":"搜索文章","search.placeholder":"输入关键词，按 Esc 关闭","search.empty":"输入关键词后显示匹配的文章","search.loading":"正在加载搜索索引…","search.load_failed":"搜索索引加载失败，请重新打开搜索重试","search.no_result":"没有找到与 \"%s\" 相关的文章","search.close":"关闭搜索","code.copy":"复制代码","code.collapse":"折叠代码","code.expand":"展开代码","heading.anchor":"链接到此节: %s","head.tag":"标签：%s","head.category":"分类：%s","head.archive":"归档","head.archive_with_date":"归档：%s","head.page_number":"第 %d 页","navigation.primary":"主导航","navigation.mobile":"移动端导航","navigation.brand_home":"FlatPaper 首页","navigation.brand_menu":"打开站点导航","navigation.open_sidebar":"打开侧边栏","navigation.close_sidebar":"关闭侧边栏","navigation.sidebar":"侧边栏","navigation.sidebar_tools":"侧边栏工具","navigation.site_links":"站点链接","navigation.site_info":"站点信息","colors.choose_theme_color":"选择主题色","colors.theme_color":"主题色","colors.toggle_color_mode":"切换颜色模式","colors.green":"绿色","colors.purple":"紫色","colors.pink":"粉色","colors.sakura":"樱花粉","colors.blue":"蓝色","colors.orange":"橙色","colors.black":"黑色","profile.default_bio":"热爱生活，热爱代码，喜欢分享技术与生活中的点滴。","welcome.cta":"开始阅读","welcome.title":"欢迎来到 FlatPaper","welcome.text":"一个专注于内容与阅读体验的博客主题。","typed.from":"出自","stack_album.label":"堆叠相册","home_hero.label":"首页开屏","home_hero.enter":"开始阅读","home_hero.note":"今日","home_hero.default_subtitle":"日常记录","home_hero.nav_links":"开屏导航","home_hero.profile_links":"个人链接","home_hero.tools":"开屏工具","home_hero.shuffle_stickers":"打乱贴纸位置","home_hero.link":"链接","home_hero.sticker_image":"贴纸图片","home_hero.visit_confirm":"要访问 %s 吗？","home_hero.visit":"访问","home_hero.cancel":"取消","toc.title":"文章目录","toc.empty":"目录会根据文章标题自动生成。","toc.expand_all":"展开全部目录","toc.collapse_all":"收起全部目录","sidebar.hot_tags":"热门标签","sidebar.latest_posts":"最新文章"};
   </script>
   
 <script src="/js/main.js"></script>
