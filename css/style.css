@@ -6420,6 +6420,9 @@ img.friends-feed-card__avatar {
   position: relative;
   height: var(--fp-stack-h, 480px);
 }
+.article-content .fp-stack.is-stacked:not(.fp-stack--nav) {
+  margin-bottom: 48px;
+}
 .fp-stack.is-stacked:focus-visible {
   outline: 2px solid var(--color-accent-strong);
   outline-offset: 8px;
